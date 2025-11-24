@@ -9,6 +9,7 @@ const icons = {
   designer: "🎨",
   datasci: "📊",
   operator: "⚙️",
+  marketing: "📣",
 };
 
 const bullets = {
@@ -39,7 +40,7 @@ const pricing = {
       name: "Full Builder Track",
       badge: "Most Popular",
       price: "₱18,500",
-      description: "Full 12-week program + capstone.",
+      description: "Full 6-10 week program + capstone.",
     },
     {
       id: "accel",
@@ -99,7 +100,7 @@ const pricing = {
       name: "Full Data Track",
       badge: "Most Popular",
       price: "₱17,900",
-      description: "8–12 week analytics + ML.",
+      description: "6-10 week analytics + ML.",
     },
     {
       id: "accel",
@@ -139,6 +140,36 @@ const pricing = {
       description: "Client delivery templates + OJT.",
     },
   ],
+  marketing: [
+    {
+      id: "essentials",
+      name: "Essentials",
+      badge: "Start Here",
+      price: "₱999",
+      description: "AI-powered marketing foundations + templates.",
+    },
+    {
+      id: "projects",
+      name: "Campaign Projects",
+      badge: "Build Proof",
+      price: "₱5,200",
+      description: "Funnels, landing pages, and automation flows.",
+    },
+    {
+      id: "full",
+      name: "Full Marketing Track",
+      badge: "Most Popular",
+      price: "₱16,800",
+      description: "6-10 weeks of ICP research through go-to-market launch.",
+    },
+    {
+      id: "accel",
+      name: "Marketing Accelerator",
+      badge: "Career Track",
+      price: "₱23,900",
+      description: "Acquisition lab, audit sprints, and on-the-job prep.",
+    },
+  ],
 };
 
 const tabs = [
@@ -146,6 +177,7 @@ const tabs = [
   { id: "designer", label: "Designer Track" },
   { id: "datasci", label: "Analyst Track" },
   { id: "operator", label: "Operator Track" },
+  { id: "marketing", label: "Marketing Track" },
 ];
 
 export default function PricingTabsSection() {
