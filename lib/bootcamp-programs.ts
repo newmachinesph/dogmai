@@ -233,4 +233,57 @@ export const bootcampPrograms: BootcampProgram[] = [
     capstone:
       "Capstone: Build a complete digital operating system with automations, dashboards, and client-ready assets that run a real process end-to-end.",
   },
+  {
+    id: "Marketing Track",
+    dotClass: "bg-cerulean",
+    intro: "Marketing Track - Growth & Revenue Marketing Bootcamp",
+    badge: "AI-Driven Growth Marketer",
+    badgeClass: "bg-cerulean/10 text-cerulean",
+    title: "AI-Driven Growth Marketer (6-10 weeks)",
+    duration: "6-10 weeks",
+    description:
+      "Architect modern acquisition systems, creative engines, and reporting loops. Pair AI copilots with sharp strategy to launch and scale digital campaigns.",
+    buttonText: "Explore Curriculum",
+    buttonClass: "bg-gradient-to-r from-cerulean to-intl-orange text-ebony",
+    buttonHref: "/curriculum/marketing-track",
+    tags: [
+      "Full-funnel growth playbooks",
+      "AI-assisted research & creative",
+      "Lifecycle, paid, and partner ops",
+      "Attribution, dashboards & insights",
+      "Narratives execs can act on",
+    ],
+    curriculumLabel: "Curriculum Overview",
+    curriculum: [
+      {
+        title: "Weeks 1-2 · Research, ICP & Story",
+        detail:
+          "Define ICPs, map journeys, and translate insights into positioning. Use AI for rapid desk research, customer synthesis, and message testing.",
+      },
+      {
+        title: "Weeks 3-4 · Channels, Experiments & Creative",
+        detail:
+          "Design paid, lifecycle, and partner experiments with clear success metrics. Leverage AI copilots to ideate concepts, copy, and creative variations fast.",
+      },
+      {
+        title: "Weeks 5-6 · Systems, Attribution & Insights",
+        detail:
+          "Instrument analytics, audit funnels, and build dashboards teams trust. Tie qualitative signals with quantitative data for crisp recommendations.",
+      },
+      {
+        title: "Optional · Launch Labs & Revops Alignment",
+        detail:
+          "Run battle drills for launches, align GTM teams, and codify playbooks that keep sales, product, and marketing rowing in sync.",
+      },
+    ],
+    stackLabel: "Stack & Tools",
+    stackItems: [
+      "Lifecycle, Paid & Partner Ops",
+      "Analytics / Attribution / Dashboarding",
+      "AI Research & Creative Copilots",
+      "Automation & Campaign Orchestration",
+    ],
+    capstone:
+      "Capstone: Ship a multi-channel growth campaign with creative assets, experiment results, and a metrics narrative ready for leadership review.",
+  },
 ];
