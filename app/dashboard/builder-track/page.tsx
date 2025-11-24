@@ -1,147 +1,95 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import DomainTab from "./components/DomainTab";
+import IntelligenceTab from "./components/IntelligenceTab";
 import LearnTab from "./components/LearnTab";
 import MasteryTab from "./components/MasteryTab";
 import MissionsTab from "./components/MissionsTab";
 import OverviewTab from "./components/OverviewTab";
 import PortfolioTab from "./components/PortfolioTab";
-import { domainTracks, DomainKey } from "./domain-tracks";
+import { domainTracks } from "./domain-tracks";
 
-// =====================================================
-// DOGM.AI - BUILDER OS DASHBOARD (COMBINED EDITION)
-// Combines: Day 1 Mission-Control, Fundamentals, Domains,
-// Mastery HQ, Missions - in one coherent LMS experience.
-// =====================================================
-
-const loopStages = [
-  "Discipline",
-  "Outcomes",
-  "Growth",
-  "Mastery",
-  "Acceleration",
-  "Intelligence",
-];
-
-const stats = [
-  { label: "Day 1 Sprint", value: "0 / 4 tasks", hint: "Discipline" },
-  { label: "Fundamentals", value: "0% complete", hint: "Foundations" },
-  { label: "AI Co-Pilot Sessions", value: "0 today", hint: "Acceleration" },
-  { label: "Track", value: "Mission-Control Builder", hint: "Domain" },
-];
-
-const fundamentals = [
-  {
-    category: "Version Control",
-    items: ["Git Basics", "Branching", "Merge Requests", "Repo Management"],
-  },
-  {
-    category: "Frontend Foundations",
-    items: ["HTML Structure", "CSS Layout", "JavaScript Basics", "Components"],
-  },
-  {
-    category: "Backend Foundations",
-    items: ["APIs 101", "REST & JSON", "Database Basics", "Auth Systems"],
-  },
-];
+// Updated DOGM.AI loop for the full-stack product development bootcamp
+const loopStages = ["Discipline", "Outcomes", "Growth", "Mastery", "Acceleration", "Intelligence"];
 
 const dailyStudy = [
-  "Learn Git basics (15 min)",
-  "Study HTML tags & semantics (20 min)",
-  "Watch JavaScript intro (10 min)",
-  "Read API fundamentals (10 min)",
+  "Review today's user story (5-10 min)",
+  "Update a UI component or e-commerce flow (15-20 min)",
+  "Extend an API or DB path (10-15 min)",
+  "Log one reflection about what shipped",
 ];
 
 const masteryPaths = [
-  { label: "Frontend Mastery", desc: "React, Next.js, UI systems, Tailwind" },
-  { label: "Backend Mastery", desc: "APIs, Auth, DB logic, workflows" },
-  { label: "AI Systems Mastery", desc: "Copilots, automations, prompt flows" },
-  { label: "Deployment Mastery", desc: "Telemetry, monitoring, staging" },
-];
-
-const missionObjectives = [
   {
-    title: "Day 1 Launch",
-    items: ["Set up repo", "Install dependencies", "Create base layout", "Run first build"],
+    label: "Weeks 1-3: Frontend (E-commerce UI)",
+    desc: "React/Next.js components for cart, checkout, product list, and states.",
+    weeks: [1, 2, 3],
   },
   {
-    title: "AI Readiness",
-    items: ["Connect AI copilot", "Run first AI-assisted task plan", "Review AI suggestions"],
+    label: "Weeks 4-6: APIs & Databases",
+    desc: "Cart API, order API, product API, user auth, relational data models.",
+    weeks: [4, 5, 6],
   },
   {
-    title: "Week 1 Goal",
-    items: ["Ship UI foundation", "Deploy a staging link", "Submit progress demo"],
-  },
-];
-
-const weeklyOutcomes = [
-  {
-    week: 1,
-    title: "Mission-Control Base App",
-    type: "Foundation Sprint",
-    status: "In Progress",
-    impact: "Scaffold a Next.js + Tailwind shell for mission-control layouts.",
+    label: "Weeks 7-9: Systems & Operations",
+    desc: "Error logging, metrics, performance profiling, retries, queues.",
+    weeks: [7, 8, 9],
   },
   {
-    week: 2,
-    title: "Telemetry + AI Readiness",
-    type: "Base Instrumentation",
-    status: "Locked",
-    impact: "Auth, basic logging, and AI readiness checks for PH agencies.",
-  },
-  {
-    week: 3,
-    title: "LGU Rapid Response Dashboard",
-    type: "Mission-Control Feature",
-    status: "Upcoming",
-    impact: "Real-time incidents, geo-mapping, AI situation briefs.",
+    label: "Weeks 10-12: Launch & Intelligence",
+    desc: "Telemetry, AI agents, production deployment, final capstone.",
+    weeks: [10, 11, 12],
   },
 ];
 
-const sprintTasks = [
-  {
-    label: "Complete AI Readiness Assessment",
-    type: "Diagnostic",
-    done: false,
-  },
-  {
-    label: "Watch Day 1 Orientation for Mission-Control Builders",
-    type: "Orientation",
-    done: false,
-  },
-  {
-    label: "Run AI-assisted stack planner for your base app",
-    type: "AI Planning",
-    done: false,
-  },
-  {
-    label: "Scaffold mission shell in Next.js + Tailwind",
-    type: "Build",
-    done: false,
-  },
-];
+type TabId = "overview" | "learn" | "missions" | "mastery" | "portfolio" | "intelligence" | "track";
 
 const DogmCombinedDashboard: React.FC = () => {
-  const [tab, setTab] = useState<
-    "overview" | "learn" | "domain" | "mastery" | "missions" | "portfolio"
-  >("overview");
-  const [domain, setDomain] = useState<DomainKey>("mission-control");
+  const activeDomain = domainTracks.ecommerce; // You can rename this track to a full-stack/product track in domain-tracks.ts
+  const curriculum = useMemo(
+    () =>
+      activeDomain.curriculum.map((module) => ({
+        ...module,
+        focus: [...module.focus],
+      })),
+    [activeDomain.curriculum],
+  );
+  const builder = useMemo(
+    () => ({
+      ...activeDomain.student,
+      notes: [...activeDomain.student.notes],
+    }),
+    [activeDomain.student],
+  );
+  const totalWeeks = curriculum.length;
+  const [tab, setTab] = useState<TabId>("overview");
+  const [weekCompletion, setWeekCompletion] = useState<Record<number, boolean>>(() =>
+    curriculum.reduce((acc, module) => {
+      acc[module.week] = false;
+      return acc;
+    }, {} as Record<number, boolean>),
+  );
 
-  const activeDomain = domainTracks[domain];
+  const completedWeeks = useMemo(() => Object.values(weekCompletion).filter(Boolean).length, [weekCompletion]);
+  const currentWeek = Math.min(completedWeeks + 1, totalWeeks);
+  const completionPercent = Math.round((completedWeeks / totalWeeks) * 100);
+  const todaysSprint = dailyStudy[0] ?? "Start today's sprint";
+
+  const handleToggleWeek = (week: number) => {
+    setWeekCompletion((prev) => ({
+      ...prev,
+      [week]: !prev[week],
+    }));
+  };
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50 pb-16">
-      {/* HEADER */}
       <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-40">
         <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
           <div className="flex flex-col gap-1">
-            <div className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
-              DOGM.AI LMS - Builder OS
-            </div>
-            <div className="text-sm font-semibold text-slate-50">
-              Mission-Control Builder - Cohort Dashboard
-            </div>
+            <div className="text-[10px] uppercase tracking-[0.18em] text-slate-500">DOGM.AI LMS - Builder OS</div>
+            <div className="text-sm font-semibold text-slate-50">Full-Stack Product Builder - 12 Week Dashboard</div>
           </div>
 
           <div className="flex items-center gap-3">
@@ -155,24 +103,22 @@ const DogmCombinedDashboard: React.FC = () => {
           </div>
         </div>
 
-        {/* NAV TABS */}
         <div className="mx-auto max-w-7xl px-4">
           <div className="flex gap-3 text-[11px] border-b border-slate-800">
             {[
               { id: "overview", label: "Overview" },
               { id: "learn", label: "Learn" },
-              { id: "domain", label: "Domain" },
-              { id: "mastery", label: "Mastery" },
               { id: "missions", label: "Missions" },
+              { id: "mastery", label: "Mastery" },
               { id: "portfolio", label: "Portfolio" },
+              { id: "intelligence", label: "Intelligence" },
+              { id: "track", label: "Track" },
             ].map((t) => (
               <button
                 key={t.id}
-                onClick={() => setTab(t.id as any)}
+                onClick={() => setTab(t.id as TabId)}
                 className={`px-4 py-2 -mb-px border-b-2 transition ${
-                  tab === t.id
-                    ? "border-emerald-400 text-emerald-300"
-                    : "border-transparent text-slate-500 hover:text-slate-300"
+                  tab === t.id ? "border-emerald-400 text-emerald-300" : "border-transparent text-slate-500 hover:text-slate-300"
                 }`}
               >
                 {t.label}
@@ -185,35 +131,37 @@ const DogmCombinedDashboard: React.FC = () => {
       <main className="mx-auto max-w-7xl px-4 pt-6 space-y-6">
         {tab === "overview" && (
           <OverviewTab
-            stats={stats}
             loopStages={loopStages}
-            weeklyOutcomes={weeklyOutcomes}
             activeDomain={activeDomain}
+            curriculum={curriculum}
+            weekCompletion={weekCompletion}
+            totalWeeks={totalWeeks}
+            completedWeeks={completedWeeks}
+            student={builder}
+            currentWeek={currentWeek}
+            completionPercent={completionPercent}
+            todaysSprint={todaysSprint}
           />
         )}
 
-        {tab === "learn" && <LearnTab dailyStudy={dailyStudy} fundamentals={fundamentals} />}
-
-        {tab === "domain" && (
-          <DomainTab
-            domainTracks={domainTracks}
-            domain={domain}
-            setDomain={setDomain}
-            activeDomain={activeDomain}
-          />
+        {tab === "learn" && (
+          <LearnTab dailyStudy={dailyStudy} curriculum={curriculum} weekCompletion={weekCompletion} onToggleWeek={handleToggleWeek} />
         )}
-
-        {tab === "mastery" && <MasteryTab masteryPaths={masteryPaths} />}
 
         {tab === "missions" && (
-          <MissionsTab missionObjectives={missionObjectives} sprintTasks={sprintTasks} />
+          <MissionsTab curriculum={curriculum} weekCompletion={weekCompletion} onToggleWeek={handleToggleWeek} />
         )}
 
-        {tab === "portfolio" && <PortfolioTab />}
+        {tab === "mastery" && <MasteryTab masteryPaths={masteryPaths} weekCompletion={weekCompletion} />}
+
+        {tab === "portfolio" && <PortfolioTab weekCompletion={weekCompletion} />}
+
+        {tab === "intelligence" && <IntelligenceTab completedWeeks={completedWeeks} totalWeeks={totalWeeks} />}
+
+        {tab === "track" && <DomainTab activeDomain={activeDomain} />}
       </main>
     </div>
   );
 };
 
 export default DogmCombinedDashboard;
-
