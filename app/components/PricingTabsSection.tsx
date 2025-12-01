@@ -26,27 +26,31 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
+      compareAt: "PHP 1,999",
       description: "Basics + community access.",
     },
     {
       id: "projects",
       name: "Projects Pack",
       badge: "Build Proof",
-      price: "₱6,990",
+      price: "₱6,999",
+      compareAt: "PHP 13,999",
       description: "Unlock builder projects + feedback.",
     },
     {
       id: "full",
       name: "Full Builder Track",
       badge: "Most Popular",
-      price: "₱18,500",
+      price: "₱17,999",
+      compareAt: "PHP 35,999",
       description: "Full 6-10 week program + capstone.",
     },
     {
       id: "accel",
       name: "Builder Accelerator",
       badge: "Career Track",
-      price: "₱27,500",
+      price: "₱26,999",
+      compareAt: "PHP 55,999",
       description: "Capstone + OJT + interview prep.",
     },
   ],
@@ -56,6 +60,7 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
+      compareAt: "PHP 11,500",
       description: "Figma basics + design community.",
     },
     {
@@ -63,6 +68,7 @@ const pricing = {
       name: "Project Pack",
       badge: "Build Proof",
       price: "₱5,500",
+      compareAt: "PHP 16,500",
       description: "Unlock UX/UI project cycles.",
     },
     {
@@ -70,6 +76,7 @@ const pricing = {
       name: "Full Designer Track",
       badge: "Most Popular",
       price: "₱15,500",
+      compareAt: "PHP 21,500",
       description: "6–10 week design mastery + case study.",
     },
     {
@@ -77,6 +84,7 @@ const pricing = {
       name: "Designer Accelerator",
       badge: "Career Track",
       price: "₱22,900",
+      compareAt: "PHP 27,900",
       description: "Portfolio, interview prep, job-facing polish.",
     },
   ],
@@ -86,6 +94,7 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
+      compareAt: "PHP 11,500",
       description: "Python basics + analytics intro.",
     },
     {
@@ -93,6 +102,7 @@ const pricing = {
       name: "Analytics Projects",
       badge: "Build Proof",
       price: "₱5,900",
+      compareAt: "PHP 18,500",
       description: "Dashboards, reports, datasets.",
     },
     {
@@ -100,6 +110,7 @@ const pricing = {
       name: "Full Data Track",
       badge: "Most Popular",
       price: "₱17,900",
+      compareAt: "PHP 23,500",
       description: "6-10 week analytics + ML.",
     },
     {
@@ -107,6 +118,7 @@ const pricing = {
       name: "Data Accelerator",
       badge: "Career Track",
       price: "₱26,500",
+      compareAt: "PHP 31,500",
       description: "Business case studies + interview prep.",
     },
   ],
@@ -116,6 +128,7 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
+      compareAt: "PHP 10,500",
       description: "AI productivity + ops basics.",
     },
     {
@@ -123,6 +136,7 @@ const pricing = {
       name: "Workflow Projects",
       badge: "Build Proof",
       price: "₱4,900",
+      compareAt: "PHP 13,900",
       description: "Automation + dashboard tasks.",
     },
     {
@@ -130,6 +144,7 @@ const pricing = {
       name: "Full Operator Track",
       badge: "Most Popular",
       price: "₱14,500",
+      compareAt: "PHP 19,500",
       description: "6–10 weeks + complete digital OS build.",
     },
     {
@@ -137,6 +152,7 @@ const pricing = {
       name: "Operator Accelerator",
       badge: "Career Track",
       price: "₱21,900",
+      compareAt: "PHP 27,000",
       description: "Client delivery templates + OJT.",
     },
   ],
@@ -146,6 +162,7 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
+      compareAt: "PHP 10,500",
       description: "AI-powered marketing foundations + templates.",
     },
     {
@@ -153,6 +170,7 @@ const pricing = {
       name: "Campaign Projects",
       badge: "Build Proof",
       price: "₱5,200",
+      compareAt: "PHP 15,800",
       description: "Funnels, landing pages, and automation flows.",
     },
     {
@@ -160,6 +178,7 @@ const pricing = {
       name: "Full Marketing Track",
       badge: "Most Popular",
       price: "₱16,800",
+      compareAt: "PHP 22,500",
       description: "6-10 weeks of ICP research through go-to-market launch.",
     },
     {
@@ -167,6 +186,7 @@ const pricing = {
       name: "Marketing Accelerator",
       badge: "Career Track",
       price: "₱23,900",
+      compareAt: "PHP 29,900",
       description: "Acquisition lab, audit sprints, and on-the-job prep.",
     },
   ],
@@ -200,20 +220,27 @@ export default function PricingTabsSection() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-3">
-          {tabs.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => setActive(t.id)}
-              className={`inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
-                active === t.id
-                  ? "border-intl-orange/70 bg-intl-orange/20 text-white"
-                  : "border-white/10 bg-black/30 text-slate-300 hover:border-white/30"
-              }`}
-            >
-              <span>{icons[t.id as keyof typeof icons]}</span>
-              {t.label}
-            </button>
-          ))}
+          {tabs.map((t) => {
+            const isEnabled = t.id === "builder";
+            const isActive = active === t.id;
+            return (
+              <button
+                key={t.id}
+                onClick={() => {
+                  if (isEnabled) setActive(t.id);
+                }}
+                disabled={!isEnabled}
+                className={`inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
+                  isActive
+                    ? "border-intl-orange/70 bg-intl-orange/20 text-white"
+                    : "border-white/10 bg-black/30 text-slate-300"
+                } ${isEnabled ? "hover:border-white/30" : "cursor-not-allowed opacity-50"}`}
+              >
+                <span>{icons[t.id as keyof typeof icons]}</span>
+                {t.label}
+              </button>
+            );
+          })}
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -226,7 +253,10 @@ export default function PricingTabsSection() {
                 {tier.badge}
               </span>
               <h3 className="mt-3 text-lg font-semibold text-white">{tier.name}</h3>
-              <p className="mt-1 text-2xl font-extrabold text-cyan-300">{tier.price}</p>
+              {tier.compareAt && (
+                <p className="mt-1 text-xs font-semibold text-slate-500 line-through">{tier.compareAt}</p>
+              )}
+              <p className="text-2xl font-extrabold text-cyan-300">{tier.price}</p>
               <p className="mt-2 text-xs text-slate-400">{tier.description}</p>
 
               <ul className="mt-4 space-y-1 text-[11px] text-slate-300">

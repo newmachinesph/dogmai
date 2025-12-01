@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const heroStats = [
-  { label: "Next Cohort", value: "March", detail: "50 seats" },
+  { label: "Next Cohort", value: "March", detail: "100 seats" },
   {
     label: "Duration",
     value: "10 weeks",

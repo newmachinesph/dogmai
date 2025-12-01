@@ -23,7 +23,7 @@ export default function ApplySection() {
               </p>
               <ul className="mt-6 space-y-3 text-sm text-slate-300">
                 {[
-                  "6–12 week cohort with daily copilot support.",
+                  "12-20 week cohort with daily copilot support.",
                   "Weekly outcome reviews from mentors + AI.",
                   "3–5 portfolio artifacts tied to a verifiable credential.",
                 ].map((item) => (

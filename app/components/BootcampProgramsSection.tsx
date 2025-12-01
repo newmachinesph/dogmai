@@ -28,22 +28,29 @@ export default function BootcampProgramsSection() {
               you want to master—Builder, Designer, Analyst, or Execution—and the loop adapts to you.
             </p>
             <div className="space-y-3">
-              {bootcampPrograms.map((program) => (
-                <button
-                  key={program.id}
-                  className={`flex w-full items-center justify-between rounded-2xl border px-4 py-3 text-left text-sm transition ${
-                    activeTrack === program.id
-                      ? "border-intl-orange/60 bg-intl-orange/10 text-white"
-                      : "border-white/10 bg-black/30 text-slate-300 hover:border-white/30"
-                  }`}
-                  onClick={() => setActiveTrack(program.id)}
-                >
-                  <span>{program.id}</span>
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
-                    {program.duration}
-                  </span>
-                </button>
-              ))}
+              {bootcampPrograms.map((program) => {
+                const isEnabled = program.id === "Builder Track";
+                const isActive = activeTrack === program.id;
+                return (
+                  <button
+                    key={program.id}
+                    className={`flex w-full items-center justify-between rounded-2xl border px-4 py-3 text-left text-sm transition ${
+                      isActive
+                        ? "border-intl-orange/60 bg-intl-orange/10 text-white"
+                        : "border-white/10 bg-black/30 text-slate-300"
+                    } ${isEnabled ? "hover:border-white/30" : "cursor-not-allowed opacity-50"}`}
+                    onClick={() => {
+                      if (isEnabled) setActiveTrack(program.id);
+                    }}
+                    disabled={!isEnabled}
+                  >
+                    <span className="min-w-[50%]">{program.id}</span>
+                    <span className="text-[11px] uppercase tracking-[0.2em] text-slate-400 text-right">
+                      {isEnabled ? program.duration : ""}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 

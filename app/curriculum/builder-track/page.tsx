@@ -6,96 +6,144 @@ import SampleProjectsSection, {
 } from "./SampleProjectsSection";
 
 export const metadata: Metadata = {
-  title: "Mission-Control Builder Track | DOGM.AI",
+  title: "E-Commerce Builder Track | DOGM.AI",
   description:
-    "Curriculum overview for the Mission-Control Builder Track—AI-native engineering for national-scale deployment in the Philippines.",
+    "Build production-grade e-commerce systems with AI copilots, part-time sprints, and weekly proof built for Philippine merchants and brands.",
 };
 
 const heroStats = [
-  { label: "Next Cohort", value: "March", detail: "50 seats" },
-  { label: "Duration", value: "12 weeks", detail: "Mission-control sprint" },
-  { label: "Proof cadence", value: "Weekly", detail: "Deployable artifacts" },
+  { label: "Next Cohort", value: "March", detail: "100 seats" },
+  { label: "Duration", value: "20 weeks", detail: "Part-time, mentor-led & AI-guided" },
+  { label: "Proof cadence", value: "Weekly", detail: "Shipped artifacts" },
+];
+
+const learnItems = [
+  {
+    title: "Build full-stack commerce systems",
+    detail: "Storefronts, carts, checkouts, catalogs, inventory, admin tools.",
+  },
+  {
+    title: "Integrate AI copilots into workflows",
+    detail: "Smart search, product generation, review intelligence, automation.",
+  },
+  {
+    title: "Automate back-office operations",
+    detail: "Catalog syncing, order routing, logistics flows, support pipelines.",
+  },
+  {
+    title: "Design for real-world constraints",
+    detail: "Low bandwidth, COD, local logistics, messy data, marketplaces.",
+  },
+  {
+    title: "Deliver proof every week",
+    detail: "Your artifacts immediately become portfolio-ready proof-of-work.",
+  },
 ];
 
 const whoList = [
-  "Full-Stack Developers",
-  "Technical Operators",
-  "Systems Integrators",
-  "Government Digital Teams",
-  "Public-Sector Innovation Units",
-  "Engineering Leads",
+  "Full-stack developers",
+  "E-commerce developers",
+  "Shopify and WooCommerce builders leveling up",
+  "Freelancers serving merchants and DTC brands",
+  "DTC tech teams",
+  "Marketplace sellers learning engineering",
+  "Technical operators",
+  "Product builders launching commerce tools",
 ];
 
-const outcomeWeeks = [
+const curriculumPhases = [
   {
-    title: "Week 3 — LGU Rapid Response Dashboard",
-    detail:
-      "Real-time incidents, geo-mapping, operator tagging, AI situation briefs.",
+    title: "Phase 1 (Weeks 1-4)",
+    subtitle: "Core Foundations Sprint",
+    description:
+      "HTML, CSS, JavaScript, and DOM mastery to give you the building blocks modern commerce platforms rely on.",
+    itemsTitle: "You will build:",
+    items: [
+      "Multi-page marketing site",
+      "Responsive layouts built for mobile-first markets",
+      "Interactive product cards and components",
+      "JavaScript-powered mini tools",
+      "DOM widgets like cart previews, popups, and banners",
+    ],
+    artifactsTitle: "Artifacts:",
+    artifacts: ["Foundation site", "Component library", "JS micro-interactions pack"],
   },
   {
-    title: "Week 4 — Citizen Analytics Pipeline",
-    detail:
-      "Complaint ingestion → AI classification → routing → agency reporting.",
+    title: "Phase 2 (Weeks 5-10)",
+    subtitle: "Frontend Commerce Sprint",
+    description: "React, Next.js, Tailwind, and component systems for real storefronts.",
+    itemsTitle: "Weekly focus:",
+    items: [
+      "Week 5 - DOM to API commerce widgets: pricing updater, search, filters",
+      "Week 6 - React storefront components: cards, variant selectors, cart logic",
+      "Week 7 - Next.js storefront architecture: routing, PDPs, multi-page flows",
+      "Week 8 - Tailwind commerce design system: navbars, modals, checkout UI",
+      "Week 9 - Product catalog plus dynamic routing: categories, PDPs",
+      "Week 10 - Storefront performance sprint: SEO, caching, image pipelines",
+    ],
+    artifactsTitle: "Artifacts:",
+    artifacts: [
+      "React store mini-app",
+      "Full Next.js storefront",
+      "Commerce component library",
+      "SEO-ready, optimized storefront prototype",
+    ],
   },
   {
-    title: "Week 5 — Logistics Automation System",
-    detail:
-      "Resource allocation, forecasting, and optimized supply-chain workflows.",
+    title: "Phase 3 (Weeks 11-14)",
+    subtitle: "Backend and Store Engine Sprint",
+    description: "APIs, databases, auth, and admin dashboards running the store.",
+    itemsTitle: "Weekly focus:",
+    items: [
+      "Week 11 - Product catalog engine with CRUD APIs, variants, categories",
+      "Week 12 - Inventory and order system with carts-to-orders flow",
+      "Week 13 - Merchant authentication with roles and protected dashboards",
+      "Week 14 - Merchant admin panel with analytics and management UI",
+    ],
+    artifactsTitle: "Artifacts:",
+    artifacts: [
+      "Product catalog system",
+      "Order and inventory engine",
+      "Admin auth and dashboard",
+      "Store engine ready for AI integrations",
+    ],
   },
   {
-    title: "Week 6 — Multi-Agency Coordination Panel",
-    detail:
-      "Decision rooms, SOP-guided flows, AI-generated updates, audit trails.",
+    title: "Phase 4 (Weeks 15-17)",
+    subtitle: "AI Commerce Sprint",
+    description: "Ship AI features that give merchants leverage.",
+    itemsTitle: "Weekly focus:",
+    items: [
+      "Week 15 - AI product generation tools: titles, descriptions, tags",
+      "Week 16 - AI customer support and review intelligence",
+      "Week 17 - AI growth and merchandising intelligence dashboards",
+    ],
+    artifactsTitle: "Artifacts:",
+    artifacts: [
+      "AI writer for product pages",
+      "AI review classifier and assistant",
+      "AI merchant intelligence dashboard",
+    ],
   },
   {
-    title: "Week 7 — Public Safety Intelligence Tools",
-    detail:
-      "Incident signals, CCTV assistive AI, event timelines, threat reduction.",
-  },
-  {
-    title: "Week 8 — Government Workflow Automation",
-    detail:
-      "Permits, evaluations, documentation pipelines, automated verification.",
-  },
-  {
-    title: "Week 9 — Field Operator Mobile Tools",
-    detail:
-      "Offline-first reporting, AI → structured form conversion, on-site syncing.",
-  },
-  {
-    title: "Week 10 — Unified Mission-Control Integration",
-    detail:
-      "API gateway, operator role matrix, telemetry deepening, staging deployment.",
-  },
-];
-
-const masteryScenarios = [
-  "Emergency Response",
-  "Multi-Agency Logistics",
-  "Citizen Escalation Loop",
-  "Public Safety Intelligence",
-  "Custom Mission Scenario",
-];
-
-const proofItems = [
-  { label: "80%+", detail: "Ship their capstone" },
-  { label: "10–20h", detail: "Weekly AI-supported work" },
-  { label: "6–10", detail: "Portfolio artifacts" },
-  { label: "100%", detail: "Mission-ready skill uplift" },
-];
-
-const aiAdvantages = [
-  {
-    title: "Remove Drag",
-    detail: "Instant debugging, refactors, clarifications, system planning.",
-  },
-  {
-    title: "Collapse Feedback Loops",
-    detail: "Get critique at every iteration — improve 5x faster.",
-  },
-  {
-    title: "Increase Leverage",
-    detail: "AI covers boilerplate so you stay focused on judgment calls.",
+    title: "Phase 5 (Weeks 18-20)",
+    subtitle: "Capstone - End-to-End Commerce System",
+    description:
+      "Pull everything together and defend a complete commerce flow from storefront to automations.",
+    itemsTitle: "Build and ship:",
+    items: [
+      "Storefront with catalog and inventory",
+      "Checkout simulation",
+      "Merchant admin dashboard",
+      "AI merchant features and operational automations",
+    ],
+    artifactsTitle: "You will deliver:",
+    artifacts: [
+      "Fully deployable e-commerce system",
+      "Technical and product documentation",
+      "Architecture rationale and defense",
+      "AI-assisted merchant tools and a demo-ready portfolio case study",
+    ],
   },
 ];
 
@@ -106,59 +154,105 @@ const createProjectImage = (label: string, colorA: string, colorB: string) => {
 
 const sampleProjects: SampleProject[] = [
   {
-    title: "LGU Mission Console",
+    title: "Open Storefront Engine",
     description:
-      "Responsive command interface showing alerts, geo-tagged incidents, and AI-generated situation briefs for municipal operators.",
+      "Dynamic storefront with PDPs, cart logic, and SEO-first architecture.",
     images: [
-      createProjectImage("LGU Console", "#fa5404", "#f97316"),
-      createProjectImage("Operator Timeline", "#f97316", "#facc15"),
+      createProjectImage("Storefront Engine", "#fa5404", "#facc15"),
+      createProjectImage("PDP System", "#f97316", "#fb923c"),
     ],
-    highlights: [
-      "Multi-source incident ingestion",
-      "AI summaries for operators",
-      "Role-based view states",
-    ],
+    highlights: ["Dynamic routing", "Variants and bundling", "Component library"],
     impact: [
-      "Reduces incident coordination time by 60%",
-      "Gives command centers real-time situational clarity",
+      "Proves you can ship production storefronts end-to-end",
+      "Shows recruiters a working PDP and cart experience",
     ],
   },
   {
-    title: "Citizen Signal Intelligence",
+    title: "Open AI Product Studio",
     description:
-      "Pipeline that turns SMS/email complaints into prioritized tickets, enriched with AI classification and routing automations.",
+      "AI engine that generates product titles, descriptions, tags, and attributes.",
     images: [
-      createProjectImage("Signal Intelligence", "#0ea5e9", "#22d3ee"),
-      createProjectImage("Ticket Routing", "#22d3ee", "#2dd4bf"),
+      createProjectImage("AI Product Studio", "#0ea5e9", "#22d3ee"),
+      createProjectImage("Bulk Generation", "#22d3ee", "#2dd4bf"),
     ],
-    highlights: [
-      "Natural language intake",
-      "Automated routing logic",
-      "Analytics-ready reporting",
-    ],
+    highlights: ["Prompt flows", "Attribute extraction", "Bulk creation tooling"],
     impact: [
-      "Keeps agencies ahead of citizen escalations",
-      "Transforms raw complaints into action-ready cues",
+      "Cuts catalog creation time for merchants",
+      "Demonstrates AI workflow design and guardrails",
     ],
   },
   {
-    title: "Field Ops Mobility Kit",
+    title: "Open Merchant Command Center",
     description:
-      "Offline-ready mobile workspace with photo uploads, AI transcription, and push sync to the national mission-control stack.",
+      "Admin operating system with orders, stock, logistics tracking, and AI insights.",
     images: [
-      createProjectImage("Field Mobility", "#6366f1", "#a855f7"),
-      createProjectImage("Sync Hub", "#a855f7", "#ec4899"),
+      createProjectImage("Command Center", "#6366f1", "#a855f7"),
+      createProjectImage("Merchant Ops", "#a855f7", "#ec4899"),
     ],
-    highlights: [
-      "Offline-first capture",
-      "Gov-approved data handling",
-      "AI-assisted documentation",
-    ],
+    highlights: ["Order tracing", "Stock alerts", "AI merchant summaries"],
     impact: [
-      "Eliminates reporting lag for field teams",
-      "Feeds the national system with structured updates",
+      "Shows ownership of mission-critical dashboards",
+      "Turns raw store data into operator-ready insights",
     ],
   },
+];
+
+const proofItems = [
+  { label: "80%+", detail: "Ship their capstone" },
+  { label: "10-15h", detail: "Weekly AI-supported work" },
+  { label: "6-10", detail: "Portfolio artifacts" },
+  { label: "100%", detail: "Commerce-ready skill uplift" },
+];
+
+const aiAdvantages = [
+  {
+    title: "Remove Drag",
+    detail: "Instant debugging, refactors, clarifications, and system planning.",
+  },
+  {
+    title: "Collapse Feedback Loops",
+    detail: "Get critique fast so you iterate 5x faster.",
+  },
+  {
+    title: "Increase Leverage",
+    detail: "AI covers boilerplate so you focus on judgment and shipping.",
+  },
+];
+
+const commerceRealities = [
+  "Facebook, Shopify, and Shopee ecosystems",
+  "COD culture and local logistics",
+  "High-friction merchant operations",
+  "Content-heavy workflows",
+  "Multi-channel inventory challenges",
+  "Low-bandwidth customer environments",
+];
+
+const graduateBenefits = [
+  {
+    title: "6-10 Deployable Commerce Artifacts",
+    detail: "Storefronts, automations, admin systems, and AI tools.",
+  },
+  {
+    title: "AI-Native Engineering Playbooks",
+    detail: "Reusable patterns for fast e-commerce delivery.",
+  },
+  {
+    title: "Commerce Portfolio",
+    detail: "Proof recruiters, brands, and clients trust.",
+  },
+  {
+    title: "Deployment Confidence",
+    detail: "You can build systems merchants can use immediately.",
+  },
+];
+
+const ctaBullets = [
+  "20-week part-time cohort",
+  "Daily AI-guided sprints",
+  "Weekly mentor review cycles",
+  "6-10 deployable projects",
+  "E-commerce certification",
 ];
 
 export default function BuilderTrackPage() {
@@ -179,31 +273,23 @@ export default function BuilderTrackPage() {
             </div>
             <div className="relative z-10">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">
-                Mission-Control Builder Track
+                E-Commerce Builder Track
               </p>
               <h1 className="mt-4 font-heading text-4xl font-extrabold text-white sm:text-5xl">
-                AI-Native Engineering for National-Scale Deployment
+                AI-Native Engineering for Modern Online Commerce
               </h1>
-              <p className="mt-4 text-sm text-slate-300">
-                Next Cohort: March · 50 Seats
-              </p>
+              <p className="mt-4 text-sm text-slate-300">Next Cohort: March - 100 seats</p>
               <p className="mt-6 text-base text-slate-200">
-                Build mission-critical systems with AI copilots, weekly shipped
-                outcomes, and a deployment-first curriculum designed for
-                Philippine public-sector operations.
+                Build production-grade commerce systems with AI copilots, weekly shipped outcomes,
+                and a practical part-time curriculum designed for Philippine merchants, DTC brands,
+                and entrepreneurial tech teams.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="/apply"
                   className="inline-flex items-center justify-center rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-ebony shadow-[0_0_40px_rgba(250,84,4,0.65)] transition hover:-translate-y-1 hover:bg-orange-500"
                 >
-                  Apply Now &rarr;
-                </a>
-                <a
-                  href="#overview-video"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-intl-orange hover:text-intl-orange"
-                >
-                  Watch Overview &rarr;
+                  Apply Now -&gt;
                 </a>
               </div>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -215,9 +301,7 @@ export default function BuilderTrackPage() {
                     <p className="text-[11px] uppercase tracking-[0.3em] text-slate-400">
                       {stat.label}
                     </p>
-                    <p className="mt-2 text-2xl font-semibold text-white">
-                      {stat.value}
-                    </p>
+                    <p className="mt-2 text-2xl font-semibold text-white">{stat.value}</p>
                     <p className="text-sm text-slate-400">{stat.detail}</p>
                   </div>
                 ))}
@@ -234,18 +318,17 @@ export default function BuilderTrackPage() {
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="space-y-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cerulean">
-                    Build the Systems a Nation Runs On
+                    Build the Systems Modern Commerce Runs On
                   </p>
                   <p className="text-sm text-slate-300">
-                    Dogm.ai is equipping agencies across the Philippines with
-                    mission-control AI for public safety, logistics, and
-                    governance.
+                    E-commerce in the Philippines is exploding. Logistics complexity, marketplace
+                    saturation, and AI-accelerated competition are rewriting the playbook.
                   </p>
                   <p className="text-sm text-slate-300">
-                    This Builder Track prepares you to ship full-stack
-                    prototypes, embed AI copilots, and deliver operational
-                    dashboards that handle public-sector constraints. Every week
-                    ends with proof-of-work that real agencies can review.
+                    The E-Commerce Builder Track prepares you to launch full-stack storefronts,
+                    AI-assisted merchant tools, automated operations, and growth intelligence
+                    dashboards. Every week ends with proof-of-work you can deploy, demo, or plug into
+                    a client stack.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
@@ -253,22 +336,21 @@ export default function BuilderTrackPage() {
                     You will learn to:
                   </p>
                   <ul className="mt-4 space-y-3 text-sm text-slate-200">
-                    {[
-                      "Ship full-stack mission-control prototypes",
-                      "Integrate AI copilots into real workflows",
-                      "Build operational dashboards, alerts, and automations",
-                      "Design systems resilient to public-sector constraints",
-                      "Deliver proof-of-work every single week",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-intl-orange" />
-                        <span>{item}</span>
+                    {learnItems.map((item) => (
+                      <li
+                        key={item.title}
+                        className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/30 p-3"
+                      >
+                        <span className="mt-1 inline-flex min-h-1.5 min-w-1.5 rounded-full bg-intl-orange" />
+                        <span className="text-slate-100">
+                          <span className="font-semibold text-white">{item.title}</span> -{" "}
+                          {item.detail}
+                        </span>
                       </li>
                     ))}
                   </ul>
                   <p className="mt-4 text-sm text-intl-orange">
-                    You don’t just learn to build — you build what the country
-                    needs.
+                    You do not just learn to code — you build systems merchants can use today.
                   </p>
                 </div>
               </div>
@@ -282,7 +364,7 @@ export default function BuilderTrackPage() {
                   Who the Track Is For
                 </p>
                 <p className="text-sm text-slate-300">
-                  Designed for Digital Professionals building real systems:
+                  Built for digital professionals and future founders shipping real commerce systems:
                 </p>
                 <ul className="space-y-2 text-sm text-slate-200">
                   {whoList.map((item) => (
@@ -295,8 +377,8 @@ export default function BuilderTrackPage() {
                   ))}
                 </ul>
                 <p className="text-sm text-slate-300">
-                  You’ll graduate as an AI-native Mission-Control Engineer ready
-                  for deployment.
+                  You graduate as an AI-native e-commerce engineer ready to automate modern
+                  storefronts and merchant operations.
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
@@ -304,12 +386,12 @@ export default function BuilderTrackPage() {
                   The DOGM.AI Chain for Builders
                 </p>
                 <p className="mt-2 text-2xl font-semibold text-white">
-                  Daily Sprints → Weekly Outcomes → Growth Loops → Mastery →
-                  Acceleration → Intelligence
+                  Daily Sprints -&gt; Weekly Outcomes -&gt; Growth Loops -&gt; Mastery -&gt; Acceleration -&gt;
+                  Intelligence
                 </p>
                 <p className="mt-4 text-sm text-slate-300">
-                  Every layer compounds into mission-ready execution. The
-                  rituals build discipline; the artifacts build trust.
+                  Every layer compounds. The rituals build discipline; the artifacts build trust with
+                  recruiters, brands, and clients.
                 </p>
               </div>
             </div>
@@ -320,137 +402,55 @@ export default function BuilderTrackPage() {
               The Curriculum
             </p>
             <h2 className="mt-3 text-3xl font-bold text-white">
-              12 Weeks · Mission-Control Focused · Outcome-Driven
+              20 Weeks - E-Commerce Focused - Part-Time Friendly - Outcome-Driven
             </h2>
             <p className="mt-2 text-sm text-slate-300">
-              Every sprint produces agency-usable, verifiable artifacts.
+              Every sprint produces merchant-usable, verifiable proof-of-work.
             </p>
             <div className="mt-8 grid gap-6">
-              <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                  Weeks 1–2 — Foundation Sprint
-                </p>
-                <h3 className="mt-2 text-2xl font-semibold text-white">
-                  Mission-Control Architecture + AI Readiness
-                </h3>
-                <p className="mt-2 text-sm text-slate-300">
-                  Build the backbone for fast, reliable, public-sector
-                  development.
-                </p>
-                <p className="mt-4 text-xs uppercase tracking-[0.3em] text-slate-400">
-                  You will build:
-                </p>
-                <ul className="mt-3 space-y-2 text-sm text-slate-200">
-                  {[
-                    "Mission-control base app (Next.js + Tailwind)",
-                    "Operator / Analyst / Admin auth",
-                    "API integration stubs for mission-control services",
-                    "Real-time logging + telemetry",
-                    "Readiness scorecard + friction map",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-cerulean" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-sm text-slate-300">
-                  This is your operating base for the remaining 10 weeks.
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                  Weeks 3–10 — Outcome Cycles
-                </p>
-                <h3 className="mt-2 text-2xl font-semibold text-white">
-                  Weekly mission-aligned, deployable proof-of-work.
-                </h3>
-                <p className="mt-2 text-sm text-slate-300">
-                  Each week ends with a working feature, operational workflow,
-                  or AI-powered tool.
-                </p>
-                <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  {outcomeWeeks.map((week) => (
-                    <div
-                      key={week.title}
-                      className="rounded-2xl border border-white/10 bg-black/50 p-4 text-sm text-slate-200"
-                    >
-                      <p className="font-semibold text-white">{week.title}</p>
-                      <p className="mt-1 text-slate-400">{week.detail}</p>
-                    </div>
-                  ))}
+              {curriculumPhases.map((phase) => (
+                <div
+                  key={phase.title}
+                  className="rounded-3xl border border-white/10 bg-black/40 p-6"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+                    {phase.title}
+                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold text-white">{phase.subtitle}</h3>
+                  <p className="mt-2 text-sm text-slate-300">{phase.description}</p>
+                  <p className="mt-4 text-xs uppercase tracking-[0.3em] text-slate-400">
+                    {phase.itemsTitle}
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-200">
+                    {phase.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="mt-1 inline-flex min-h-1.5 min-w-1.5 rounded-full bg-cerulean" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 text-xs uppercase tracking-[0.3em] text-slate-400">
+                    {phase.artifactsTitle}
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-200">
+                    {phase.artifacts.map((artifact) => (
+                      <li key={artifact} className="flex items-start gap-3">
+                        <span className="mt-1 inline-flex min-h-1.5 min-w-1.5 rounded-full bg-intl-orange" />
+                        <span>{artifact}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-
-              <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                  Weeks 11–12 — Mastery & Deployment
-                </p>
-                <h3 className="mt-2 text-2xl font-semibold text-white">
-                  Capstone: End-to-End Mission Scenario
-                </h3>
-                <p className="mt-2 text-sm text-slate-300">
-                  Build and defend a complete operational flow:
-                </p>
-                <ul className="mt-4 flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-slate-300">
-                  {masteryScenarios.map((scenario) => (
-                    <li
-                      key={scenario}
-                      className="rounded-full border border-white/15 px-3 py-1"
-                    >
-                      {scenario}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-sm text-slate-200">You will deliver:</p>
-                <ul className="mt-2 space-y-2 text-sm text-slate-300">
-                  {[
-                    "A fully deployable mission-control system",
-                    "Technical + operational documentation",
-                    "Architecture defense & rationale",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-intl-orange" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-sm font-semibold text-intl-orange">
-                  🏅 Certification: DOGM.AI Mission-Control AI Builder
-                </p>
-              </div>
+              ))}
             </div>
           </section>
 
           <SampleProjectsSection projects={sampleProjects} />
 
           <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-black/80 via-slate-950/70 to-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
-            <h2 className="text-3xl font-bold text-white">
-              What Graduates Leave With
-            </h2>
+            <h2 className="text-3xl font-bold text-white">What Graduates Leave With</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
-              {[
-                {
-                  title: "6–10 Deployment-Ready Artifacts",
-                  detail:
-                    "Dashboards, automations, data pipelines, and an end-to-end capstone.",
-                },
-                {
-                  title: "AI-Native Engineering Playbooks",
-                  detail:
-                    "Reusable blueprints for fast, modern system delivery.",
-                },
-                {
-                  title: "Mission-Control Portfolio",
-                  detail: "Proof recruiters, agencies, & partners trust.",
-                },
-                {
-                  title: "Deployment Confidence",
-                  detail:
-                    "You can ship systems that real teams can use in the field.",
-                },
-              ].map((item) => (
+              {graduateBenefits.map((item) => (
                 <div
                   key={item.title}
                   className="rounded-3xl border border-white/10 bg-black/40 p-6"
@@ -470,9 +470,7 @@ export default function BuilderTrackPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cerulean">
                   The AI Co-Pilot Advantage
                 </p>
-                <p className="text-sm text-slate-300">
-                  AI isn’t a shortcut — it’s the multiplier.
-                </p>
+                <p className="text-sm text-slate-300">AI is not the shortcut — it is the multiplier.</p>
                 <ul className="space-y-3 text-sm text-slate-200">
                   {aiAdvantages.map((item) => (
                     <li
@@ -487,52 +485,38 @@ export default function BuilderTrackPage() {
                   ))}
                 </ul>
                 <p className="text-sm text-slate-300">
-                  You become the kind of builder who ships at modern speed.
+                  You become the builder who ships at modern e-commerce speed.
                 </p>
               </div>
               <div className="space-y-4 rounded-3xl border border-white/10 bg-black/40 p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-intl-orange/80">
-                  A System Built for National Deployment
+                  A Track Built for Modern Commerce
                 </p>
-                <p className="text-sm text-slate-200">
-                  This track aligns with the needs of the Philippine public
-                  sector:
-                </p>
+                <p className="text-sm text-slate-200">Aligned with Filipino e-commerce realities:</p>
                 <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                  {[
-                    "Multi-agency workflows",
-                    "LGU operational realities",
-                    "High-friction government processes",
-                    "Low-bandwidth environments",
-                    "Public safety + logistics constraints",
-                    "Human-in-the-loop decision structures",
-                  ].map((item) => (
+                  {commerceRealities.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-cerulean" />
+                      <span className="mt-1 inline-flex min-h-1.5 min-w-1.5 rounded-full bg-cerulean" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
                 <p className="text-sm text-slate-300">
-                  Every artifact is designed to be used, not just showcased.
+                  Everything you build is designed to be usable, not just showcased.
                 </p>
               </div>
             </div>
           </section>
 
           <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-black/80 via-slate-950/70 to-black/75 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
-            <h2 className="text-3xl font-bold text-white">
-              Outcomes That Stand Up to Scrutiny
-            </h2>
+            <h2 className="text-3xl font-bold text-white">Outcomes That Stand Up to Scrutiny</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {proofItems.map((item) => (
                 <div
                   key={item.label}
                   className="rounded-3xl border border-white/10 bg-black/40 p-5 text-center"
                 >
-                  <p className="text-3xl font-semibold text-intl-orange">
-                    {item.label}
-                  </p>
+                  <p className="text-3xl font-semibold text-intl-orange">{item.label}</p>
                   <p className="mt-2 text-sm uppercase tracking-[0.2em] text-slate-400">
                     {item.detail}
                   </p>
@@ -548,18 +532,11 @@ export default function BuilderTrackPage() {
                   Apply to the Builder Track
                 </p>
                 <h2 className="mt-2 text-3xl font-bold text-white">
-                  Become the mission-control builder your agency — or the
-                  country — can’t replace.
+                  Become the e-commerce builder your clients, team, or brand cannot replace.
                 </h2>
                 <ul className="mt-4 space-y-2 text-sm text-slate-200">
-                  {[
-                    "✓ 12-week high-intensity cohort",
-                    "✓ Daily AI-guided sprints",
-                    "✓ Weekly mentor review cycles",
-                    "✓ 6–10 deployable projects",
-                    "✓ Mission-control certification",
-                  ].map((item) => (
-                    <li key={item}>{item}</li>
+                  {ctaBullets.map((item) => (
+                    <li key={item}>✓ {item}</li>
                   ))}
                 </ul>
               </div>
@@ -569,7 +546,7 @@ export default function BuilderTrackPage() {
                     href="/apply"
                     className="inline-flex items-center justify-center rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-ebony shadow-[0_0_40px_rgba(250,84,4,0.65)] transition hover:-translate-y-1 hover:bg-orange-500"
                   >
-                    Start Application →
+                    Start Application -&gt;
                   </a>
                   <a
                     href="https://calendly.com"
@@ -577,14 +554,14 @@ export default function BuilderTrackPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-intl-orange hover:text-intl-orange"
                   >
-                    Schedule an Intro Call →
+                    Schedule an Intro Call -&gt;
                   </a>
                 </div>
                 <a
                   href="mailto:hello@dogm.ai"
                   className="block rounded-2xl border border-white/10 bg-black/40 px-6 py-4 text-center text-sm font-semibold text-slate-200 transition hover:border-intl-orange hover:text-intl-orange"
                 >
-                  hello@dogm.ai →
+                  hello@dogm.ai -&gt;
                 </a>
               </div>
             </div>

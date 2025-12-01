@@ -15,30 +15,30 @@ const tiers: Tier[] = [
     label: "Daily Structure",
     labelClass: "text-intl-orange",
     dotClass: "bg-intl-orange",
-    title: "Daily Learning Sprints",
+    title: "Daily Operating Rhythm",
     body:
-      "Short, focused execution blocks designed for momentum.",
+      "2-3 hour windows that mix async standups, deep work, and mentor office hours so part-time learners keep momentum without burning out.",
     bullets: [
-      "30-45 minute sprint work",
-      "AI-guided planning & task breakdowns",
-      "Daily micro-deliverables",
-      "Optional mentor check-ins",
-      "Reflection prompts for improvement",
+      "Morning async standup + plan inside the workspace",
+      "90-minute focused build sprint (live or async)",
+      "AI-guided task breakdown + code reviews",
+      "Drop-in mentor office hours for blockers",
+      "End-of-day micro deliverable or reflection",
     ],
-    footer: "Daily structure -> daily progress -> daily proof.",
+    footer: "Show up daily, log progress, bank proof.",
   },
   {
     label: "Weekly Structure",
     labelClass: "text-cerulean",
     dotClass: "bg-cerulean",
     title: "Weekly Outcome Cycles",
-    body: "Every week ends with something you can ship.",
+    body: "Monday planning, mid-week checkpoints, and Friday demos force a shipped asset every week.",
     bullets: [
-      "Weekly milestone project",
-      "AI-supported research & prototyping",
-      "Mentor feedback + revision cycle",
-      "Upload to your project portfolio",
-      "Progress dashboard & growth indicators",
+      "Kickoff call to set sprint scope + success criteria",
+      "Structured build templates + research prompts",
+      "Wednesday async checkpoint with mentor notes",
+      "Friday live demo / Loom walkthrough upload",
+      "Weekly red-yellow-green progress dashboard",
     ],
     footer: "You don't just learn - you produce.",
   },
@@ -47,15 +47,15 @@ const tiers: Tier[] = [
     labelClass: "text-allports",
     dotClass: "bg-allports",
     title: "Monthly Mastery Milestones",
-    body: "Repetition becomes intuition.",
+    body: "Full-stack evaluations with hiring ops so you see exactly where to improve and what to showcase.",
     bullets: [
-      "Full project evaluation",
-      "AI-assisted mastery assessment",
-      "Skill gaps & personalized next steps",
-      "Optional advanced challenges",
-      "Monthly mastery badge & portfolio update",
+      "Full project + repo audit with senior mentor",
+      "AI-assisted skills assessment and rubric scoring",
+      "Portfolio + LinkedIn refresh session",
+      "Career strategist call for blockers & goals",
+      "Optional advanced brief if you're ahead",
     ],
-    footer: "Each month marks a visible leap forward.",
+    footer: "Each month documents a measurable leap.",
   },
 ];
 
@@ -116,14 +116,16 @@ export default function BootcampStructure() {
 
         <div className="mx-auto mt-16 max-w-3xl text-center">
           <p className="text-sm leading-relaxed text-slate-300">
-            This layered structure keeps the DOGM.AI chain unbroken for Digital
-            Professionals:{" "}
+            The DOGM.AI loop is intentionally realistic for working
+            professionals—short daily rituals, weekly accountability, and
+            monthly career checkpoints tie together into one compounding
+            operating system:{" "}
             <span className="font-semibold text-white">
               Discipline &rarr; Outcomes &rarr; Growth &rarr; Mastery &rarr;
               Acceleration &rarr; Intelligence.
             </span>{" "}
-            Each cycle compounds skill and produces measurable, portfolio-ready
-            proof that recruiters and clients can search, verify, and trust.
+            Every cycle ships artifacts, proof, and signals that hiring partners
+            can verify.
           </p>
         </div>
       </div>

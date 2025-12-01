@@ -33,7 +33,7 @@ export default function HeroSection() {
               DOGM.AI BOOTCAMP
             </span>
             <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] text-slate-200">
-              Next cohort: March 16 | 50 seats
+              Next cohort: March 16 | 100 seats
             </span>
           </div>
 
@@ -42,8 +42,8 @@ export default function HeroSection() {
               The AI bootcamp built to get you hired for the work you ship.
             </h1>
             <p className="text-base text-slate-200 sm:text-lg">
-              12 intense weeks of shipping live builds, ruthless mentor feedback, and hiring ops
-              support that turns your progress into a narrative recruiters believe.
+              12-20 weeks of shipping live builds, ruthless mentor feedback, and hiring
+              ops support that turns your progress into a narrative recruiters believe.
             </p>
           </div>
 
@@ -73,13 +73,6 @@ export default function HeroSection() {
               Apply to the Bootcamp
               <span className="text-lg">&rarr;</span>
             </a>
-            <button
-              type="button"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-5 py-2.5 text-xs font-medium text-slate-200 backdrop-blur-sm transition-all duration-200 hover:border-slate-500 hover:text-white hover:scale-105"
-            >
-              Watch the 90-Second Tour
-              <span className="text-lg">&rarr;</span>
-            </button>
           </div>
         </div>
 
@@ -89,7 +82,7 @@ export default function HeroSection() {
               Inside the Bootcamp
             </p>
             <p className="mt-2 text-base font-semibold text-white">
-              12-week live cohort engineered around disciplined shipping and career outcomes.
+              12-20 weeks live cohort engineered around disciplined shipping and career outcomes.
             </p>
             <p className="mt-2 text-xs text-slate-400">
               Daily accountability, coach-led reviews, demo days, and a placement squad translating
@@ -101,10 +94,11 @@ export default function HeroSection() {
               Who Thrives Here
             </p>
             <ul className="mt-2 space-y-2 text-xs text-slate-300">
-              <li>• Product builders ready to lead AI roadmaps and win stakeholder trust.</li>
-              <li>• Designers shaping adaptive interfaces with live prototypes, not mockups.</li>
-              <li>• Analysts transforming data stacks into automated decision engines.</li>
-              <li>• Operators obsessed with automating workflows and scaling execution.</li>
+              <li>🛠️ Product builders ready to lead AI roadmaps and win stakeholder trust.</li>
+              <li>🎨 Designers shaping adaptive interfaces with live prototypes, not mockups.</li>
+              <li>📊 Analysts transforming data stacks into automated decision engines.</li>
+              <li>⚙️ Operators obsessed with automating workflows and scaling execution.</li>
+              <li>📣 Marketers converting demand pipelines into AI-driven growth loops.</li>
             </ul>
           </div>
         </div>

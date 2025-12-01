@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "What's the realistic time commitment?",
     answer:
-      "Expect 6–10 focused hours per week for 6–12 weeks. Most learners spend 45–60 minutes per day on sprints, then stack a longer session for project delivery. Optional advanced challenges, office hours, and partner events can add more time if you choose.",
+      "Expect 6–10 focused hours per week for 12-20 weeks. Most learners spend 45–60 minutes per day on sprints, then stack a longer session for project delivery. Optional advanced challenges, office hours, and partner events can add more time if you choose.",
   },
   {
     question: "Do I receive a certificate or credential when I finish?",

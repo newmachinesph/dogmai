@@ -380,7 +380,7 @@ export default function PitchDeckPage() {
                     Engineered for career outcomes.
                   </Heading>
                   <p className="text-lg font-semibold text-white">
-                    12-week live cohort | March 16 | 50 seats
+                    12-week live cohort | March 16 | 100 seats
                   </p>
                 </div>
 

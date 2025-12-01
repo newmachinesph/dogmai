@@ -30,8 +30,8 @@ export const bootcampPrograms: BootcampProgram[] = [
     intro: "Builder Track - Web & Product Development Bootcamp",
     badge: "Full-Stack Product Builder",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
-    title: "Full-Stack Product Builder (8-12 weeks)",
-    duration: "8-12 weeks",
+    title: "Full-Stack Product Builder (12-20 weeks)",
+    duration: "12-20 weeks",
     description:
       "Go from zero spec to shipped product. Design, build, and deploy production-grade apps using modern frontends, pragmatic backends, and AI-native workflows.",
     buttonText: "See Curriculum",
@@ -47,22 +47,22 @@ export const bootcampPrograms: BootcampProgram[] = [
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
-        title: "Weeks 1-2 · Modern Frontend Foundations",
+        title: "Modern Frontend Foundations",
         detail:
           "Build responsive, production-ready UIs with React, Next.js, and Tailwind. Use AI to scaffold components, refactor code, and speed up iteration.",
       },
       {
-        title: "Weeks 3-4 · APIs, Auth & Real Databases",
+        title: "APIs, Auth & Real Databases",
         detail:
           "Design REST/JSON APIs, wire up auth, and model real-world data with relational databases. Focus on reliability, security, and maintainability.",
       },
       {
-        title: "Weeks 5-6 · AI Integrations & Automation",
+        title: "AI Integrations & Automation",
         detail:
           "Embed copilots, prompt flows, background jobs, and webhooks. Connect your app to AI services and automations that handle real user workflows.",
       },
       {
-        title: "Weeks 7-8 · Performance, Polish & Launch",
+        title: "Performance, Polish & Launch",
         detail:
           "Optimize performance, crush bugs, add analytics, and refine UX. Deploy, monitor, and iterate on a real production environment.",
       },
@@ -74,7 +74,7 @@ export const bootcampPrograms: BootcampProgram[] = [
       "AI Copilots / Codegen / Workflow Automation",
     ],
     capstone:
-      "Capstone: Ship a live, production-ready product with telemetry, docs, and AI-enabled workflows you can demo to real users.",
+      "Capstone: Ship a live, production-ready product with docs and AI-enabled workflows you can demo to real users.",
   },
   {
     id: "Designer Track",
