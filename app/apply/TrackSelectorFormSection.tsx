@@ -6,16 +6,15 @@ import ApplyForm from "./ApplyForm";
 import ReadinessGuide from "./ReadinessGuide";
 
 export default function TrackSelectorFormSection() {
-  const builderProgram = bootcampPrograms.find((program) => program.id === "Builder Track");
-  const trackOptions = builderProgram ? [builderProgram.id] : ["Builder Track"];
-  const fallbackTrack = trackOptions[0];
+  const availablePrograms = bootcampPrograms;
+  const fallbackTrack = availablePrograms[0]?.id ?? "Builder Track";
+  const trackOptions =
+    availablePrograms.length > 0 ? availablePrograms.map((program) => program.id) : [fallbackTrack];
   const [selectedTrack, setSelectedTrack] = useState(fallbackTrack);
   const resolvedOptions = trackOptions;
 
   const handleTrackChange = (track: string) => {
-    if (track === "Builder Track") {
-      setSelectedTrack(track);
-    }
+    setSelectedTrack(track);
   };
 
   return (
@@ -23,51 +22,51 @@ export default function TrackSelectorFormSection() {
       <section className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-black/75 to-slate-950/70 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
         <div className="mb-8 space-y-3 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Pick your starter lane</p>
-          <h2 className="font-heading text-3xl font-bold text-white">Builder Track applications now open.</h2>
+          <h2 className="font-heading text-3xl font-bold text-white">All tracks are now open for applications.</h2>
           <p className="text-sm text-slate-300">
             Daily learning sprints, weekly outcome reviews, and monthly mastery milestones power every track. Choose the lane that matches how you create leverage today.
           </p>
         </div>
         <div className="grid gap-5 lg:grid-cols-2">
-          {builderProgram ? (
+          {availablePrograms.map((program) => (
             <label
-              key={builderProgram.id}
+              key={program.id}
               className="group relative flex flex-col gap-4 rounded-3xl border border-white/10 bg-black/55 p-6 transition hover:border-intl-orange/60"
             >
                 <input
                   type="radio"
                   name="trackInterest"
-                  value={builderProgram.id}
+                  value={program.id}
                   form="apply-form"
-                  checked={selectedTrack === builderProgram.id}
-                  onChange={() => handleTrackChange(builderProgram.id)}
+                  checked={selectedTrack === program.id}
+                  onChange={() => handleTrackChange(program.id)}
                   className="peer absolute right-6 top-6 h-5 w-5 cursor-pointer appearance-none rounded-full border border-white/30 bg-transparent transition checked:border-none checked:bg-intl-orange"
                 />
               <div className="flex flex-col space-y-2 pr-10">
                 <div className="flex items-center justify-between text-xs uppercase tracking-[0.25em] text-slate-400">
-                  <span>{builderProgram.id}</span>
-                  <span>{builderProgram.duration}</span>
+                  <span>{program.id}</span>
+                  <span>{program.duration}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-white">{builderProgram.title}</h3>
-                <p className="text-sm text-slate-300" dangerouslySetInnerHTML={{ __html: builderProgram.description }} />
+                <h3 className="text-xl font-semibold text-white">{program.title}</h3>
+                <p className="text-sm text-slate-300" dangerouslySetInnerHTML={{ __html: program.description }} />
               </div>
               <ul className="space-y-2 text-sm text-slate-200">
-                {builderProgram.tags.slice(0, 2).map((tag) => (
+                {program.tags.slice(0, 2).map((tag) => (
                   <li key={tag} className="flex items-center gap-2">
                     <span className="inline-flex h-1.5 w-1.5 rounded-full bg-intl-orange" />
                     {tag}
                   </li>
                 ))}
-                <li className="text-slate-400">Capstone: {builderProgram.capstone}</li>
+                <li className="text-slate-400">Capstone: {program.capstone}</li>
               </ul>
               <p className="text-xs text-slate-400">
-                {builderProgram.curriculum[0]?.title ?? "Weekly coaching"} - Daily structure -&gt; weekly proof -&gt; monthly mastery.
+                {program.curriculum[0]?.title ?? "Weekly coaching"} - Daily structure -&gt; weekly proof -&gt; monthly mastery.
               </p>
             </label>
-          ) : null}
+          ))}
         </div>
         <p className="mt-6 text-center text-xs text-slate-400">
-          Builder Track is the only cohort currently accepting applications. Mention &quot;still deciding&quot; in your notes if you want guidance for other tracks.
+          Unsure which track to pick? Mention &quot;still deciding&quot; in your application notes and we will share guidance based on your goals.
         </p>
       </section>
 

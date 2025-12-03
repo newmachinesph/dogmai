@@ -82,8 +82,8 @@ export const bootcampPrograms: BootcampProgram[] = [
     intro: "Designer Track - UI/UX & Product Design Bootcamp",
     badge: "Intelligent Interface Designer",
     badgeClass: "bg-cerulean/10 text-cerulean",
-    title: "Intelligent Interface Designer (6-10 weeks)",
-    duration: "6-10 weeks",
+    title: "Intelligent Interface Designer (8-14 weeks)",
+    duration: "8-14 weeks",
     description:
       "Design interfaces that feel effortless and intelligent. Combine UX fundamentals, systems thinking, and AI-assisted exploration to create portfolio-ready case studies.",
     buttonText: "View Curriculum",
@@ -99,22 +99,22 @@ export const bootcampPrograms: BootcampProgram[] = [
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
-        title: "Weeks 1-2 · Research, Flows & User Journeys",
+        title: "Research, Flows & User Journeys",
         detail:
           "Talk to users, map their journeys, and identify friction points. Use AI to cluster insights, synthesize themes, and speed up analysis.",
       },
       {
-        title: "Weeks 3-4 · Design Systems & Figma Mastery",
+        title: "Design Systems & Figma Mastery",
         detail:
           "Create reusable components, tokens, and patterns in Figma. Build a design system that keeps complex products consistent and easy to extend.",
       },
       {
-        title: "Weeks 5-6 · Prototyping, Testing & Iteration",
+        title: "Prototyping, Testing & Iteration",
         detail:
           "Build interactive prototypes, run lean usability tests, and iterate quickly based on real feedback and behavioral signals.",
       },
       {
-        title: "Optional · AI Creative Labs",
+        title: "Optional AI Creative Labs",
         detail:
           "Explore visual directions and motion concepts with AI-generated variations. Use them as sparks, not crutches, for your own design voice.",
       },
@@ -134,8 +134,8 @@ export const bootcampPrograms: BootcampProgram[] = [
     intro: "Analyst Track - Applied Data & AI Analytics Bootcamp",
     badge: "Data Science for Digital Professionals",
     badgeClass: "bg-allports/10 text-allports",
-    title: "Data Science for Digital Professionals (8-12 weeks)",
-    duration: "8-12 weeks",
+    title: "Data Science for Digital Professionals (10-16 weeks)",
+    duration: "10-16 weeks",
     description:
       "Turn messy, real-world data into decisions. Use Python, analytics, and applied AI to answer business questions and communicate insights leaders trust.",
     buttonText: "Check Curriculum",
@@ -151,22 +151,22 @@ export const bootcampPrograms: BootcampProgram[] = [
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
-        title: "Weeks 1-2 · Python, Wrangling & Exploration",
+        title: "Python, Wrangling & Exploration",
         detail:
           "Use Python and Pandas to clean, merge, and explore datasets. Generate visual summaries and surface non-obvious patterns with AI support.",
       },
       {
-        title: "Weeks 3-4 · Analytics, Dashboards & Reporting",
+        title: "Analytics, Dashboards & Reporting",
         detail:
           "Build dashboards that answer specific business questions. Prioritize clarity, signal over noise, and stakeholder-friendly layouts.",
       },
       {
-        title: "Weeks 5-6 · Intro to ML & Experimentation",
+        title: "Intro to ML & Experimentation",
         detail:
           "Train baseline models, design simple experiments, and interpret results without hype. Focus on impact, not just accuracy scores.",
       },
       {
-        title: "Weeks 7-8 · AI Insights, Storytelling & Narratives",
+        title: "AI Insights, Storytelling & Narratives",
         detail:
           "Use AI to draft insight summaries, refine your storyline, and tailor your messaging to execs, operators, and clients.",
       },
@@ -186,8 +186,8 @@ export const bootcampPrograms: BootcampProgram[] = [
     intro: "Operator Track - Digital Operator Bootcamp",
     badge: "AI-Driven Digital Operator",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
-    title: "Digital Operator Accelerator (6-10 weeks)",
-    duration: "6-10 weeks",
+    title: "Digital Operator Accelerator (8-14 weeks)",
+    duration: "8-14 weeks",
     description:
       "Build the backbone of how work gets executed. Master systems, automations, and delivery loops so teams ship faster with AI as your co-operator.",
     buttonText: "Review Curriculum",
@@ -203,22 +203,22 @@ export const bootcampPrograms: BootcampProgram[] = [
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
-        title: "Weeks 1-2 · Systems, OS Setup & AI Workflows",
+        title: "Systems, OS Setup & AI Workflows",
         detail:
           "Design your personal and team operating system. Use AI to organize tasks, research faster, and keep projects moving without chaos.",
       },
       {
-        title: "Weeks 3-4 · Automation & Data-Backed Operations",
+        title: "Automation & Data-Backed Operations",
         detail:
           "Build automations with tools like Zapier and Make. Clean and structure data in spreadsheets, and ship simple dashboards that track what matters.",
       },
       {
-        title: "Weeks 5-6 · Communication, Content & Delivery",
+        title: "Communication, Content & Delivery",
         detail:
           "Draft client updates, briefs, and documentation with AI assistance. Standardize templates, SOPs, and delivery formats teams can reuse.",
       },
       {
-        title: "Optional · Intelligent Workflow Labs",
+        title: "Optional Intelligent Workflow Labs",
         detail:
           "Prototype multi-step, cross-tool workflows that connect CRM, docs, chat, and reporting into a single smooth pipeline.",
       },
@@ -239,8 +239,8 @@ export const bootcampPrograms: BootcampProgram[] = [
     intro: "Marketing Track - Growth & Revenue Marketing Bootcamp",
     badge: "AI-Driven Growth Marketer",
     badgeClass: "bg-cerulean/10 text-cerulean",
-    title: "AI-Driven Growth Marketer (6-10 weeks)",
-    duration: "6-10 weeks",
+    title: "AI-Driven Growth Marketer (8-14 weeks)",
+    duration: "8-14 weeks",
     description:
       "Architect modern acquisition systems, creative engines, and reporting loops. Pair AI copilots with sharp strategy to launch and scale digital campaigns.",
     buttonText: "Explore Curriculum",
@@ -256,22 +256,22 @@ export const bootcampPrograms: BootcampProgram[] = [
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
-        title: "Weeks 1-2 · Research, ICP & Story",
+        title: "Research, ICP & Story",
         detail:
           "Define ICPs, map journeys, and translate insights into positioning. Use AI for rapid desk research, customer synthesis, and message testing.",
       },
       {
-        title: "Weeks 3-4 · Channels, Experiments & Creative",
+        title: "Channels, Experiments & Creative",
         detail:
           "Design paid, lifecycle, and partner experiments with clear success metrics. Leverage AI copilots to ideate concepts, copy, and creative variations fast.",
       },
       {
-        title: "Weeks 5-6 · Systems, Attribution & Insights",
+        title: "Systems, Attribution & Insights",
         detail:
           "Instrument analytics, audit funnels, and build dashboards teams trust. Tie qualitative signals with quantitative data for crisp recommendations.",
       },
       {
-        title: "Optional · Launch Labs & Revops Alignment",
+        title: "Optional Launch Labs & Revops Alignment",
         detail:
           "Run battle drills for launches, align GTM teams, and codify playbooks that keep sales, product, and marketing rowing in sync.",
       },

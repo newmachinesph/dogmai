@@ -212,7 +212,7 @@ export default function ApplyForm({ selectedTrack, onTrackChange, trackOptions }
             className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-slate-100 transition focus:border-intl-orange focus:outline-none"
           >
             {trackOptions.map((track) => (
-              <option key={track} value={track} disabled={track !== "Builder Track"}>
+              <option key={track} value={track}>
                 {track}
               </option>
             ))}

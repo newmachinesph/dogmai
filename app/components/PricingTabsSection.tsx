@@ -31,7 +31,7 @@ const pricing = {
     },
     {
       id: "projects",
-      name: "Projects Pack",
+      name: "Project Pack",
       badge: "Build Proof",
       price: "₱6,999",
       compareAt: "PHP 13,999",
@@ -99,7 +99,7 @@ const pricing = {
     },
     {
       id: "projects",
-      name: "Analytics Projects",
+      name: "Project Pack",
       badge: "Build Proof",
       price: "₱5,999",
       compareAt: "PHP 11,999",
@@ -133,7 +133,7 @@ const pricing = {
     },
     {
       id: "projects",
-      name: "Workflow Projects",
+      name: "Project Pack",
       badge: "Build Proof",
       price: "₱3,999",
       compareAt: "PHP 7,999",
@@ -167,7 +167,7 @@ const pricing = {
     },
     {
       id: "projects",
-      name: "Campaign Projects",
+      name: "Project Pack",
       badge: "Build Proof",
       price: "₱3,999",
       compareAt: "PHP 7,999",

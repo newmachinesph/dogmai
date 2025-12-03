@@ -6,49 +6,49 @@ import SampleProjectsSection, {
 } from "./SampleProjectsSection";
 
 export const metadata: Metadata = {
-  title: "E-Commerce Builder Track | DOGM.AI",
+  title: "HealthTech Builder Track | DOGM.AI",
   description:
-    "Build production-grade e-commerce systems with AI copilots, part-time sprints, and weekly proof built for Philippine merchants and brands.",
+    "Build patient-safe healthtech platforms with AI copilots, compliance-first sprints, and weekly proof built for Philippine hospitals and clinics.",
 };
 
 const heroStats = [
   { label: "Next Cohort", value: "March", detail: "100 seats" },
   { label: "Duration", value: "20 weeks", detail: "Part-time, mentor-led & AI-guided" },
-  { label: "Proof cadence", value: "Weekly", detail: "Shipped artifacts" },
+  { label: "Proof cadence", value: "Weekly", detail: "Clinical proof packages" },
 ];
 
 const learnItems = [
   {
-    title: "Build full-stack commerce systems",
-    detail: "Storefronts, carts, checkouts, catalogs, inventory, admin tools.",
+    title: "Build full-stack care delivery systems",
+    detail: "Patient portals, intake forms, provider consoles, and reporting layers.",
   },
   {
-    title: "Integrate AI copilots into workflows",
-    detail: "Smart search, product generation, review intelligence, automation.",
+    title: "Integrate AI copilots for clinicians",
+    detail: "Summarize visits, surface insights, suggest orders, and trigger alerts.",
   },
   {
-    title: "Automate back-office operations",
-    detail: "Catalog syncing, order routing, logistics flows, support pipelines.",
+    title: "Automate health operations",
+    detail: "Scheduling, handoffs, remote monitoring tasks, claims, and follow-ups.",
   },
   {
-    title: "Design for real-world constraints",
-    detail: "Low bandwidth, COD, local logistics, messy data, marketplaces.",
+    title: "Design for compliance and resilience",
+    detail: "Privacy, audit trails, offline-first UX, and trustworthy data models.",
   },
   {
     title: "Deliver proof every week",
-    detail: "Your artifacts immediately become portfolio-ready proof-of-work.",
+    detail: "Each sprint ends with clinic-ready modules and documentation.",
   },
 ];
 
 const whoList = [
-  "Full-stack developers",
-  "E-commerce developers",
-  "Shopify and WooCommerce builders leveling up",
-  "Freelancers serving merchants and DTC brands",
-  "DTC tech teams",
-  "Marketplace sellers learning engineering",
-  "Technical operators",
-  "Product builders launching commerce tools",
+  "Full-stack developers joining hospital innovation teams",
+  "Engineers inside digital health startups",
+  "Freelancers building remote care and telehealth platforms",
+  "Clinical informatics specialists modernizing their stack",
+  "Public health and NGO tech squads",
+  "Operators translating care operations into software",
+  "AI engineers focusing on health workflows",
+  "Students and founders prototyping care coordination tools",
 ];
 
 const curriculumPhases = [
@@ -56,93 +56,97 @@ const curriculumPhases = [
     title: "Phase 1 (Weeks 1-4)",
     subtitle: "Core Foundations Sprint",
     description:
-      "HTML, CSS, JavaScript, and DOM mastery to give you the building blocks modern commerce platforms rely on.",
+      "HTML, CSS, JavaScript, accessibility, and privacy-first practices tuned for regulated health products.",
     itemsTitle: "You will build:",
     items: [
-      "Multi-page marketing site",
-      "Responsive layouts built for mobile-first markets",
-      "Interactive product cards and components",
-      "JavaScript-powered mini tools",
-      "DOM widgets like cart previews, popups, and banners",
-    ],
-    artifactsTitle: "Artifacts:",
-    artifacts: ["Foundation site", "Component library", "JS micro-interactions pack"],
-  },
-  {
-    title: "Phase 2 (Weeks 5-10)",
-    subtitle: "Frontend Commerce Sprint",
-    description: "React, Next.js, Tailwind, and component systems for real storefronts.",
-    itemsTitle: "Weekly focus:",
-    items: [
-      "Week 5 - DOM to API commerce widgets: pricing updater, search, filters",
-      "Week 6 - React storefront components: cards, variant selectors, cart logic",
-      "Week 7 - Next.js storefront architecture: routing, PDPs, multi-page flows",
-      "Week 8 - Tailwind commerce design system: navbars, modals, checkout UI",
-      "Week 9 - Product catalog plus dynamic routing: categories, PDPs",
-      "Week 10 - Storefront performance sprint: SEO, caching, image pipelines",
+      "Patient education microsite with consent messaging",
+      "Responsive provider dashboard shell",
+      "Interactive intake and triage forms",
+      "JavaScript helpers for validations and metrics capture",
+      "Accessibility-first UI components",
     ],
     artifactsTitle: "Artifacts:",
     artifacts: [
-      "React store mini-app",
-      "Full Next.js storefront",
-      "Commerce component library",
-      "SEO-ready, optimized storefront prototype",
+      "Patient journey microsite",
+      "Clinical component library",
+      "Accessibility and privacy checklist",
+    ],
+  },
+  {
+    title: "Phase 2 (Weeks 5-10)",
+    subtitle: "Frontend Health Platform Sprint",
+    description: "React, Next.js, Tailwind, and pattern libraries for care delivery experiences.",
+    itemsTitle: "Weekly focus:",
+    items: [
+      "Week 5 - Intake-to-triage flows: multi-step forms, escalation rules, validations",
+      "Week 6 - Provider workspace UI: charts, med orders, task queues, notifications",
+      "Week 7 - Next.js architecture for multi-tenant clinics and partners",
+      "Week 8 - Tailwind systems tuned to clinical density and readability",
+      "Week 9 - Patient timeline and record viewers with contextual insights",
+      "Week 10 - Performance and accessibility sprint for clinical reliability",
+    ],
+    artifactsTitle: "Artifacts:",
+    artifacts: [
+      "React care delivery mini-app",
+      "Next.js provider and patient portal",
+      "Clinical UI kit",
+      "Accessibility and latency playbook",
     ],
   },
   {
     title: "Phase 3 (Weeks 11-14)",
-    subtitle: "Backend and Store Engine Sprint",
-    description: "APIs, databases, auth, and admin dashboards running the store.",
+    subtitle: "Backend and Clinical Data Sprint",
+    description: "APIs, data models, auth, and admin dashboards powering clinical systems.",
     itemsTitle: "Weekly focus:",
     items: [
-      "Week 11 - Product catalog engine with CRUD APIs, variants, categories",
-      "Week 12 - Inventory and order system with carts-to-orders flow",
-      "Week 13 - Merchant authentication with roles and protected dashboards",
-      "Week 14 - Merchant admin panel with analytics and management UI",
+      "Week 11 - Patient registry and FHIR resource modeling with CRUD APIs",
+      "Week 12 - Care plan and orders engine with workflow statuses and vitals",
+      "Week 13 - Auth, role-based access, consent, and audit logging",
+      "Week 14 - Clinical admin panel with analytics, alerts, and queue controls",
     ],
     artifactsTitle: "Artifacts:",
     artifacts: [
-      "Product catalog system",
-      "Order and inventory engine",
-      "Admin auth and dashboard",
-      "Store engine ready for AI integrations",
+      "Patient data service",
+      "Care orchestration engine",
+      "Consent and auth module",
+      "Clinical admin dashboard",
     ],
   },
   {
     title: "Phase 4 (Weeks 15-17)",
-    subtitle: "AI Commerce Sprint",
-    description: "Ship AI features that give merchants leverage.",
+    subtitle: "AI Health Assistant Sprint",
+    description: "Ship AI copilots that keep clinicians in the loop while automating drudgery.",
     itemsTitle: "Weekly focus:",
     items: [
-      "Week 15 - AI product generation tools: titles, descriptions, tags",
-      "Week 16 - AI customer support and review intelligence",
-      "Week 17 - AI growth and merchandising intelligence dashboards",
+      "Week 15 - AI intake copilot: summarize symptoms, surface triage suggestions",
+      "Week 16 - AI follow-up coach: adherence nudges, patient communication templates",
+      "Week 17 - AI operations intelligence: staffing, load balancing, anomaly alerts",
     ],
     artifactsTitle: "Artifacts:",
     artifacts: [
-      "AI writer for product pages",
-      "AI review classifier and assistant",
-      "AI merchant intelligence dashboard",
+      "AI triage assistant",
+      "AI care plan assistant",
+      "Operations intelligence board",
     ],
   },
   {
     title: "Phase 5 (Weeks 18-20)",
-    subtitle: "Capstone - End-to-End Commerce System",
+    subtitle: "Capstone - Connected Care Platform",
     description:
-      "Pull everything together and defend a complete commerce flow from storefront to automations.",
+      "Pull everything together and defend a complete care delivery flow from intake to follow-up and reporting.",
     itemsTitle: "Build and ship:",
     items: [
-      "Storefront with catalog and inventory",
-      "Checkout simulation",
-      "Merchant admin dashboard",
-      "AI merchant features and operational automations",
+      "Multi-role portal for patients, clinicians, and administrators",
+      "Remote monitoring dashboards with alerting and escalation",
+      "Claims, billing, or PhilHealth-ready reporting pipelines",
+      "Compliance documentation, runbooks, and deployment automation",
     ],
     artifactsTitle: "You will deliver:",
     artifacts: [
-      "Fully deployable e-commerce system",
-      "Technical and product documentation",
+      "Launchable healthtech platform",
+      "Validation, QA, and safety packet",
       "Architecture rationale and defense",
-      "AI-assisted merchant tools and a demo-ready portfolio case study",
+      "Clinician-ready case study and deployment plan",
     ],
   },
 ];
@@ -154,105 +158,104 @@ const createProjectImage = (label: string, colorA: string, colorB: string) => {
 
 const sampleProjects: SampleProject[] = [
   {
-    title: "Open Storefront Engine",
+    title: "Connected Care Navigator",
     description:
-      "Dynamic storefront with PDPs, cart logic, and SEO-first architecture.",
+      "Coordinated patient and provider portal that manages referrals, triage, and follow-ups.",
     images: [
-      createProjectImage("Storefront Engine", "#fa5404", "#facc15"),
-      createProjectImage("PDP System", "#f97316", "#fb923c"),
+      createProjectImage("Care Navigator", "#14b8a6", "#0ea5e9"),
+      createProjectImage("Provider Console", "#0ea5e9", "#6366f1"),
     ],
-    highlights: ["Dynamic routing", "Variants and bundling", "Component library"],
+    highlights: ["Role-based UX", "Intake to triage", "Secure messaging"],
     impact: [
-      "Proves you can ship production storefronts end-to-end",
-      "Shows recruiters a working PDP and cart experience",
+      "Proves you can orchestrate patient journeys end-to-end",
+      "Demonstrates collaboration between patients, clinicians, and operations",
     ],
   },
   {
-    title: "Open AI Product Studio",
+    title: "AI Clinical Co-Pilot",
     description:
-      "AI engine that generates product titles, descriptions, tags, and attributes.",
+      "AI assistant that summarizes encounters, drafts care plans, and flags risk.",
     images: [
-      createProjectImage("AI Product Studio", "#0ea5e9", "#22d3ee"),
-      createProjectImage("Bulk Generation", "#22d3ee", "#2dd4bf"),
+      createProjectImage("Clinical Co-Pilot", "#f97316", "#facc15"),
+      createProjectImage("Safety Guardrails", "#fb923c", "#fde047"),
     ],
-    highlights: ["Prompt flows", "Attribute extraction", "Bulk creation tooling"],
+    highlights: ["Structured notes", "Prompt guardrails", "Human-in-loop approvals"],
     impact: [
-      "Cuts catalog creation time for merchants",
-      "Demonstrates AI workflow design and guardrails",
+      "Shows mastery of AI and compliance workflows",
+      "Reduces documentation drag for clinicians and operators",
     ],
   },
   {
-    title: "Open Merchant Command Center",
-    description:
-      "Admin operating system with orders, stock, logistics tracking, and AI insights.",
+    title: "Health Operations Command Center",
+    description: "Operations OS with census tracking, staffing, logistics, and AI insights.",
     images: [
-      createProjectImage("Command Center", "#6366f1", "#a855f7"),
-      createProjectImage("Merchant Ops", "#a855f7", "#ec4899"),
+      createProjectImage("Ops Command", "#6366f1", "#a855f7"),
+      createProjectImage("Load Balancing", "#a855f7", "#ec4899"),
     ],
-    highlights: ["Order tracing", "Stock alerts", "AI merchant summaries"],
+    highlights: ["Live telemetry", "Escalation rules", "Regulatory reporting"],
     impact: [
       "Shows ownership of mission-critical dashboards",
-      "Turns raw store data into operator-ready insights",
+      "Turns noisy clinical data into operator-ready insight",
     ],
   },
 ];
 
 const proofItems = [
-  { label: "80%+", detail: "Ship their capstone" },
+  { label: "80%+", detail: "Launch their care platform" },
   { label: "10-15h", detail: "Weekly AI-supported work" },
-  { label: "6-10", detail: "Portfolio artifacts" },
-  { label: "100%", detail: "Commerce-ready skill uplift" },
+  { label: "6-10", detail: "Regulated artifacts" },
+  { label: "100%", detail: "HealthTech readiness uplift" },
 ];
 
 const aiAdvantages = [
   {
     title: "Remove Drag",
-    detail: "Instant debugging, refactors, clarifications, and system planning.",
+    detail: "Instant debugging, triage prototyping, clarifications, and system planning.",
   },
   {
-    title: "Collapse Feedback Loops",
-    detail: "Get critique fast so you iterate 5x faster.",
+    title: "Accelerate Compliance Reviews",
+    detail: "Generate documentation, traceability, and mitigations while you ship.",
   },
   {
-    title: "Increase Leverage",
-    detail: "AI covers boilerplate so you focus on judgment and shipping.",
+    title: "Increase Clinical Insight",
+    detail: "AI highlights anomalies, risks, and opportunities so you focus on judgment.",
   },
 ];
 
-const commerceRealities = [
-  "Facebook, Shopify, and Shopee ecosystems",
-  "COD culture and local logistics",
-  "High-friction merchant operations",
-  "Content-heavy workflows",
-  "Multi-channel inventory challenges",
-  "Low-bandwidth customer environments",
+const healthcareRealities = [
+  "DOH, PhilHealth, and hospital partner integrations",
+  "Patchy connectivity and remote clinic deployments",
+  "Data privacy, consent, and audit requirements",
+  "Device and wearable telemetry noise",
+  "Cross-functional clinical teams and handoffs",
+  "Procurement and change-management constraints",
 ];
 
 const graduateBenefits = [
   {
-    title: "6-10 Deployable Commerce Artifacts",
-    detail: "Storefronts, automations, admin systems, and AI tools.",
+    title: "Deployable HealthTech Artifacts",
+    detail: "Portals, automations, remote monitoring, and AI copilots.",
   },
   {
-    title: "AI-Native Engineering Playbooks",
-    detail: "Reusable patterns for fast e-commerce delivery.",
+    title: "AI-Native Clinical Playbooks",
+    detail: "Reusable prompts, guardrails, and workflows for health teams.",
   },
   {
-    title: "Commerce Portfolio",
-    detail: "Proof recruiters, brands, and clients trust.",
+    title: "Regulatory-Friendly Portfolio",
+    detail: "Proof that signals safety, privacy, and operational rigor.",
   },
   {
     title: "Deployment Confidence",
-    detail: "You can build systems merchants can use immediately.",
+    detail: "You can build systems clinicians can rely on immediately.",
   },
 ];
 
 const ctaBullets = [
   "20-week part-time cohort",
-  "Daily AI-guided sprints",
-  "Weekly mentor review cycles",
-  "6-10 deployable projects",
-  "E-commerce certification",
+  "Clinical mentors and advisors",
+  "Weekly compliance and safety reviews",
+  "6-10 deployable care modules",
+  "HealthTech certification",
 ];
 
 export default function BuilderTrackPage() {
@@ -273,16 +276,16 @@ export default function BuilderTrackPage() {
             </div>
             <div className="relative z-10">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">
-                E-Commerce Builder Track
+                HealthTech Builder Track
               </p>
               <h1 className="mt-4 font-heading text-4xl font-extrabold text-white sm:text-5xl">
-                AI-Native Engineering for Modern Online Commerce
+                AI-Native Engineering for Modern Care Delivery
               </h1>
               <p className="mt-4 text-sm text-slate-300">Next Cohort: March - 100 seats</p>
               <p className="mt-6 text-base text-slate-200">
-                Build production-grade commerce systems with AI copilots, weekly shipped outcomes,
-                and a practical part-time curriculum designed for Philippine merchants, DTC brands,
-                and entrepreneurial tech teams.
+                Build production-grade healthtech systems with AI copilots, weekly shipped outcomes,
+                and a practical part-time curriculum designed for Philippine hospitals, clinics, and
+                digital health teams.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
@@ -318,17 +321,17 @@ export default function BuilderTrackPage() {
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="space-y-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cerulean">
-                    Build the Systems Modern Commerce Runs On
+                    Build the Systems Modern Care Runs On
                   </p>
                   <p className="text-sm text-slate-300">
-                    E-commerce in the Philippines is exploding. Logistics complexity, marketplace
-                    saturation, and AI-accelerated competition are rewriting the playbook.
+                    HealthTech adoption in the Philippines is accelerating. Compliance pressure,
+                    overburdened clinicians, and AI-native expectations are rewriting the playbook.
                   </p>
                   <p className="text-sm text-slate-300">
-                    The E-Commerce Builder Track prepares you to launch full-stack storefronts,
-                    AI-assisted merchant tools, automated operations, and growth intelligence
-                    dashboards. Every week ends with proof-of-work you can deploy, demo, or plug into
-                    a client stack.
+                    The HealthTech Builder Track prepares you to launch patient and provider portals,
+                    AI-assisted clinical tools, automated operations, and insight dashboards. Every
+                    week ends with proof-of-work you can deploy, defend, or plug into a clinical
+                    stack.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
@@ -350,7 +353,7 @@ export default function BuilderTrackPage() {
                     ))}
                   </ul>
                   <p className="mt-4 text-sm text-intl-orange">
-                    You do not just learn to code — you build systems merchants can use today.
+                    You do not just learn to code -- you build systems clinicians can rely on today.
                   </p>
                 </div>
               </div>
@@ -364,7 +367,7 @@ export default function BuilderTrackPage() {
                   Who the Track Is For
                 </p>
                 <p className="text-sm text-slate-300">
-                  Built for digital professionals and future founders shipping real commerce systems:
+                  Built for digital professionals and future founders shipping real health systems:
                 </p>
                 <ul className="space-y-2 text-sm text-slate-200">
                   {whoList.map((item) => (
@@ -377,8 +380,8 @@ export default function BuilderTrackPage() {
                   ))}
                 </ul>
                 <p className="text-sm text-slate-300">
-                  You graduate as an AI-native e-commerce engineer ready to automate modern
-                  storefronts and merchant operations.
+                  You graduate as an AI-native healthtech engineer ready to modernize clinics,
+                  hospitals, and care operations.
                 </p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
@@ -402,10 +405,10 @@ export default function BuilderTrackPage() {
               The Curriculum
             </p>
             <h2 className="mt-3 text-3xl font-bold text-white">
-              20 Weeks - E-Commerce Focused - Part-Time Friendly - Outcome-Driven
+              20 Weeks - HealthTech Focused - Part-Time Friendly - Outcome-Driven
             </h2>
             <p className="mt-2 text-sm text-slate-300">
-              Every sprint produces merchant-usable, verifiable proof-of-work.
+              Every sprint produces clinic-usable, verifiable proof-of-work.
             </p>
             <div className="mt-8 grid gap-6">
               {curriculumPhases.map((phase) => (
@@ -470,7 +473,7 @@ export default function BuilderTrackPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cerulean">
                   The AI Co-Pilot Advantage
                 </p>
-                <p className="text-sm text-slate-300">AI is not the shortcut — it is the multiplier.</p>
+                <p className="text-sm text-slate-300">AI is not the shortcut -- it is the multiplier.</p>
                 <ul className="space-y-3 text-sm text-slate-200">
                   {aiAdvantages.map((item) => (
                     <li
@@ -485,16 +488,16 @@ export default function BuilderTrackPage() {
                   ))}
                 </ul>
                 <p className="text-sm text-slate-300">
-                  You become the builder who ships at modern e-commerce speed.
+                  You become the builder who ships at modern healthtech speed.
                 </p>
               </div>
               <div className="space-y-4 rounded-3xl border border-white/10 bg-black/40 p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-intl-orange/80">
-                  A Track Built for Modern Commerce
+                  A Track Built for Modern HealthTech
                 </p>
-                <p className="text-sm text-slate-200">Aligned with Filipino e-commerce realities:</p>
+                <p className="text-sm text-slate-200">Aligned with Filipino healthtech realities:</p>
                 <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                  {commerceRealities.map((item) => (
+                  {healthcareRealities.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <span className="mt-1 inline-flex min-h-1.5 min-w-1.5 rounded-full bg-cerulean" />
                       <span>{item}</span>
@@ -532,11 +535,11 @@ export default function BuilderTrackPage() {
                   Apply to the Builder Track
                 </p>
                 <h2 className="mt-2 text-3xl font-bold text-white">
-                  Become the e-commerce builder your clients, team, or brand cannot replace.
+                  Become the healthtech builder your clinics, team, or partners cannot replace.
                 </h2>
                 <ul className="mt-4 space-y-2 text-sm text-slate-200">
                   {ctaBullets.map((item) => (
-                    <li key={item}>✓ {item}</li>
+                    <li key={item}>- {item}</li>
                   ))}
                 </ul>
               </div>
