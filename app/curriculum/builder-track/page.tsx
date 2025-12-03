@@ -445,7 +445,7 @@ export default function BuilderTrackPage() {
             </div>
           </section>
 
-          <SampleProjectsSection projects={sampleProjects} />
+          {/* <SampleProjectsSection projects={sampleProjects} /> */}
 
           <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-black/80 via-slate-950/70 to-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <h2 className="text-3xl font-bold text-white">What Graduates Leave With</h2>

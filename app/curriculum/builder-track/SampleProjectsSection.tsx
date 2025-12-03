@@ -23,7 +23,7 @@ export default function SampleProjectsSection({ projects }: Props) {
     <>
       <section className="rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
         <div className="mb-8 space-y-3 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Sample Mission-Control Projects</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Sample Ecommerce Projects</p>
           <h2 className="text-3xl font-bold text-white">See the caliber of proof you’ll produce.</h2>
           <p className="text-sm text-slate-300">These projects mirror the fidelity and structure of the deployable artifacts you ship throughout the track.</p>
         </div>
