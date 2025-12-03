@@ -49,7 +49,7 @@ const pricing = {
       id: "accel",
       name: "Builder Accelerator",
       badge: "Career Track",
-      price: "₱26,999",
+      price: "₱27,999",
       compareAt: "PHP 55,999",
       description: "Capstone + OJT + interview prep.",
     },
