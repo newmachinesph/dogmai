@@ -5,7 +5,7 @@ import AnimatedSection from "./AnimatedSection";
 const highlights = [
   {
     label: "Timeframe",
-    value: "6-12 weeks",
+    value: "12-20 weeks",
     description: "Designed as an intensive, repeatable learning cycle.",
   },
   {

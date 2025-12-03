@@ -9,7 +9,7 @@ const readinessSignals = [
   "You already ship digital products or automated workflows each week.",
   "You have the discipline to run daily copilot reps and weekly reviews.",
   "You want a credential that proves execution, not seat time.",
-  "You can devote 10-12 focused hours for 6-12 weeks.",
+  "You can devote 10-12 focused hours for 12-20 weeks.",
 ];
 
 const steps = [
