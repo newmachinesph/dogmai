@@ -49,8 +49,8 @@ const pricing = {
       id: "accel",
       name: "Builder Accelerator",
       badge: "Career Track",
-      price: "₱27,999",
-      compareAt: "PHP 55,999",
+      price: "₱25,999",
+      compareAt: "PHP 51,999",
       description: "Capstone + OJT + interview prep.",
     },
   ],
@@ -60,31 +60,31 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
-      compareAt: "PHP 11,500",
+      compareAt: "PHP 1,999",
       description: "Figma basics + design community.",
     },
     {
       id: "projects",
       name: "Project Pack",
       badge: "Build Proof",
-      price: "₱5,500",
-      compareAt: "PHP 16,500",
+      price: "₱5,999",
+      compareAt: "PHP 11,999",
       description: "Unlock UX/UI project cycles.",
     },
     {
       id: "full",
       name: "Full Designer Track",
       badge: "Most Popular",
-      price: "₱15,500",
-      compareAt: "PHP 21,500",
+      price: "₱15,999",
+      compareAt: "PHP 31,999",
       description: "6–10 week design mastery + case study.",
     },
     {
       id: "accel",
       name: "Designer Accelerator",
       badge: "Career Track",
-      price: "₱22,900",
-      compareAt: "PHP 27,900",
+      price: "₱22,999",
+      compareAt: "PHP 45,999",
       description: "Portfolio, interview prep, job-facing polish.",
     },
   ],
@@ -94,31 +94,31 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
-      compareAt: "PHP 11,500",
+      compareAt: "PHP 1,999",
       description: "Python basics + analytics intro.",
     },
     {
       id: "projects",
       name: "Analytics Projects",
       badge: "Build Proof",
-      price: "₱5,900",
-      compareAt: "PHP 18,500",
+      price: "₱5,999",
+      compareAt: "PHP 11,999",
       description: "Dashboards, reports, datasets.",
     },
     {
       id: "full",
       name: "Full Data Track",
       badge: "Most Popular",
-      price: "₱17,900",
-      compareAt: "PHP 23,500",
+      price: "₱15,999",
+      compareAt: "PHP 31,999",
       description: "6-10 week analytics + ML.",
     },
     {
       id: "accel",
       name: "Data Accelerator",
       badge: "Career Track",
-      price: "₱26,500",
-      compareAt: "PHP 31,500",
+      price: "₱22,999",
+      compareAt: "PHP 45,999",
       description: "Business case studies + interview prep.",
     },
   ],
@@ -128,31 +128,31 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
-      compareAt: "PHP 10,500",
+      compareAt: "PHP 1,999",
       description: "AI productivity + ops basics.",
     },
     {
       id: "projects",
       name: "Workflow Projects",
       badge: "Build Proof",
-      price: "₱4,900",
-      compareAt: "PHP 13,900",
+      price: "₱3,999",
+      compareAt: "PHP 7,999",
       description: "Automation + dashboard tasks.",
     },
     {
       id: "full",
       name: "Full Operator Track",
       badge: "Most Popular",
-      price: "₱14,500",
-      compareAt: "PHP 19,500",
+      price: "₱13,999",
+      compareAt: "PHP 23,999",
       description: "6–10 weeks + complete digital OS build.",
     },
     {
       id: "accel",
       name: "Operator Accelerator",
       badge: "Career Track",
-      price: "₱21,900",
-      compareAt: "PHP 27,000",
+      price: "₱19,999",
+      compareAt: "PHP 39,999",
       description: "Client delivery templates + OJT.",
     },
   ],
@@ -162,31 +162,31 @@ const pricing = {
       name: "Essentials",
       badge: "Start Here",
       price: "₱999",
-      compareAt: "PHP 10,500",
+      compareAt: "PHP 1,999",
       description: "AI-powered marketing foundations + templates.",
     },
     {
       id: "projects",
       name: "Campaign Projects",
       badge: "Build Proof",
-      price: "₱5,200",
-      compareAt: "PHP 15,800",
+      price: "₱3,999",
+      compareAt: "PHP 7,999",
       description: "Funnels, landing pages, and automation flows.",
     },
     {
       id: "full",
       name: "Full Marketing Track",
       badge: "Most Popular",
-      price: "₱16,800",
-      compareAt: "PHP 22,500",
+      price: "₱13,999",
+      compareAt: "PHP 23,999",
       description: "6-10 weeks of ICP research through go-to-market launch.",
     },
     {
       id: "accel",
       name: "Marketing Accelerator",
       badge: "Career Track",
-      price: "₱23,900",
-      compareAt: "PHP 29,900",
+      price: "₱19,999",
+      compareAt: "PHP 39,999",
       description: "Acquisition lab, audit sprints, and on-the-job prep.",
     },
   ],
@@ -221,20 +221,16 @@ export default function PricingTabsSection() {
 
         <div className="flex flex-wrap justify-center gap-3">
           {tabs.map((t) => {
-            const isEnabled = t.id === "builder";
             const isActive = active === t.id;
             return (
               <button
                 key={t.id}
-                onClick={() => {
-                  if (isEnabled) setActive(t.id);
-                }}
-                disabled={!isEnabled}
+                onClick={() => setActive(t.id)}
                 className={`inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-semibold transition ${
                   isActive
                     ? "border-intl-orange/70 bg-intl-orange/20 text-white"
                     : "border-white/10 bg-black/30 text-slate-300"
-                } ${isEnabled ? "hover:border-white/30" : "cursor-not-allowed opacity-50"}`}
+                } hover:border-white/30`}
               >
                 <span>{icons[t.id as keyof typeof icons]}</span>
                 {t.label}
