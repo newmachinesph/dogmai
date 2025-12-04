@@ -20,7 +20,7 @@ const deckTheme = {
 
 const stats = [
   { label: "Cohort Launch", value: "March 16" },
-  { label: "Seats", value: "50 selective" },
+  { label: "Seats", value: "100 selective" },
   { label: "Format", value: "Live & async" },
 ];
 
@@ -95,25 +95,31 @@ function SlideCard({
 const pricingTracks = [
   {
     track: "Builder Track",
-    price: "Essentials ₱999 · Projects ₱6,990 · Full ₱18,500 · Accelerator ₱27,500",
-    description: "Full-stack builders completing live product sprints and capstones.",
+    price: "Essentials PHP 999 | Project Pack PHP 6,999 | Full PHP 17,999 | Accelerator PHP 25,999",
+    description: "Full-stack builders deploying production products with AI copilots.",
   },
   {
     track: "Designer Track",
-    price: "Essentials ₱999 · Projects ₱5,500 · Full ₱15,500 · Accelerator ₱22,900",
-    description: "UX/UI creatives shipping polished experiences with mentorship.",
+    price: "Essentials PHP 999 | Project Pack PHP 5,999 | Full PHP 15,999 | Accelerator PHP 22,999",
+    description: "UX/UI creatives crafting intelligent interfaces, systems, and case studies.",
   },
   {
     track: "Analyst Track",
-    price: "Essentials ₱999 · Projects ₱5,900 · Full ₱17,900 · Accelerator ₱26,500",
-    description: "Analysts building dashboards, ML-ready reports, and automated insights.",
+    price: "Essentials PHP 999 | Project Pack PHP 5,999 | Full PHP 15,999 | Accelerator PHP 22,999",
+    description: "Analysts turning messy datasets into dashboards, narratives, and insights.",
   },
   {
     track: "Operator Track",
-    price: "Essentials ₱999 · Projects ₱4,900 · Full ₱14,500 · Accelerator ₱21,900",
-    description: "Ops leaders automating workflows, templating delivery, and scaling execution.",
+    price: "Essentials PHP 999 | Project Pack PHP 3,999 | Full PHP 13,999 | Accelerator PHP 19,999",
+    description: "Ops leaders building AI-first workflows, automations, and delivery systems.",
+  },
+  {
+    track: "Marketing Track",
+    price: "Essentials PHP 999 | Project Pack PHP 3,999 | Full PHP 13,999 | Accelerator PHP 19,999",
+    description: "Growth marketers architecting AI-assisted campaigns and revenue loops.",
   },
 ];
+
 
 const DeckTemplate = () => (
   <FlexBox
@@ -256,7 +262,7 @@ export default function PitchDeckPage() {
                     DOGM.AI is the operating system for accelerated mastery.
                   </Heading>
                   <p className="text-lg leading-relaxed text-slate-300">
-                    A 12-week, outcomes-driven bootcamp where students use AI daily to plan, build,
+                    A 12-20 weeks, outcomes-driven bootcamp where students use AI daily to plan, build,
                     ship, and measure real work with disciplined systems.
                   </p>
                 </div>
@@ -380,7 +386,7 @@ export default function PitchDeckPage() {
                     Engineered for career outcomes.
                   </Heading>
                   <p className="text-lg font-semibold text-white">
-                    12-week live cohort | March 16 | 100 seats
+                    12-20 weeks live cohort | March 16 | 100 seats
                   </p>
                 </div>
 
@@ -468,33 +474,69 @@ export default function PitchDeckPage() {
                 </div>
 
                 <div className="grid gap-4 text-slate-100 sm:grid-cols-2">
+
                   {[
+
                     {
-                      title: "Builder Track (8-12 weeks)",
+
+                      title: "Builder Track (12-20 weeks)",
+
                       desc: "Full-stack product builds, AI integrations, deployable apps",
+
                     },
+
                     {
-                      title: "Designer Track (6-10 weeks)",
+
+                      title: "Designer Track (8-14 weeks)",
+
                       desc: "Adaptive UX, prototyping, interface systems",
+
                     },
+
                     {
-                      title: "Analyst Track (8-12 weeks)",
+
+                      title: "Analyst Track (10-16 weeks)",
+
                       desc: "Automated decision engines, dashboards, AI analysis",
+
                     },
+
                     {
-                      title: "Operator Track (6-10 weeks)",
+
+                      title: "Operator Track (8-14 weeks)",
+
                       desc: "Workflow automation, process intelligence, systems ops",
+
                     },
+
+                    {
+
+                      title: "Marketing Track (8-14 weeks)",
+
+                      desc: "Growth experiments, AI creative, funnels, and reporting loops",
+
+                    },
+
                   ].map((track) => (
+
                     <div
+
                       key={track.title}
+
                       className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur"
+
                     >
+
                       <p className="text-base font-semibold text-white">{track.title}</p>
+
                       <p className="text-sm text-slate-300">{track.desc}</p>
+
                     </div>
+
                   ))}
+
                 </div>
+
               </SlideCard>
             </Slide>
             <Slide backgroundColor="transparent" padding={0}>
@@ -518,28 +560,45 @@ export default function PitchDeckPage() {
                   </Heading>
                   <p className="text-base text-slate-200">
                     Every track ships with AI copilots, mentor reviews, live sprints, and community
-                    support crafted for builders, designers, analysts, and operators across the
+                    support crafted for builders, designers, analysts, operators, and marketers across the
                     Philippines.
                   </p>
                 </div>
 
-                <div className="grid gap-4 text-slate-100 sm:grid-cols-2">
+                <div className="grid gap-3 text-slate-100 sm:grid-cols-2 lg:grid-cols-3">
+
                   {pricingTracks.map((track) => (
+
                     <div
+
                       key={track.track}
-                      className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"
+
+                      className="flex flex-col gap-1.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur"
+
                     >
-                      <p className="text-base font-semibold text-white">{track.track}</p>
-                      <p className="text-sm text-slate-300">{track.price}</p>
-                      <p className="text-xs text-slate-400">{track.description}</p>
+
+                      <p className="text-sm font-semibold text-white">{track.track}</p>
+
+                      <p className="text-xs font-medium text-slate-300 leading-snug">{track.price}</p>
+
+                      <p className="text-[11px] text-slate-400 leading-snug">{track.description}</p>
+
                     </div>
+
                   ))}
+
                 </div>
 
-                <div className="rounded-2xl border border-white/10 bg-black/50 px-6 py-3 text-center text-sm text-slate-200">
-                  Flexible plans and scholarships are available for cohort-ready professionals —
-                  reach out to the admissions team for details.
+
+
+                <div className="rounded-2xl border border-white/10 bg-black/50 px-5 py-3 text-center text-xs text-slate-200">
+
+                  Flexible plans and scholarships are available for cohort-ready professionals ? reach out
+
+                  to the admissions team for details.
+
                 </div>
+
               </SlideCard>
             </Slide>
             <Slide backgroundColor="transparent" padding={0}>

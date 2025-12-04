@@ -66,7 +66,7 @@ const MasteryTab: React.FC<MasteryTabProps> = ({ masteryPaths, weekCompletion })
 
         <div className="rounded-2xl border border-slate-800 bg-slate-900 p-5">
           <h2 className="text-sm font-semibold mb-2">Mastery Snapshot</h2>
-          <p className="text-[11px] text-slate-400">You're at the beginning of a 12-week full-stack arc. Keep marking weeks done to move the bar from Discipline to Intelligence.</p>
+          <p className="text-[11px] text-slate-400">You're at the beginning of a 12-30 weeks full-stack arc. Keep marking weeks done to move the bar from Discipline to Intelligence.</p>
           <div className="mt-3 h-2 rounded-full bg-slate-800 overflow-hidden">
             <div className="h-full w-[5%] bg-gradient-to-r from-indigo-500 to-emerald-400" />
           </div>

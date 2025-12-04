@@ -51,7 +51,7 @@ const PortfolioTab: React.FC<PortfolioTabProps> = ({ weekCompletion }) => {
         <div>
           <div className="text-[10px] uppercase tracking-[0.18em] text-slate-500">Portfolio Progress</div>
           <div className="mt-1 text-sm font-semibold text-slate-50">
-            Track each case study as you progress through the 12-week bootcamp
+            Track each case study as you progress through the 12-20 weeks bootcamp
           </div>
         </div>
         <button className="rounded-full bg-slate-100 px-3 py-1.5 text-[11px] font-semibold text-slate-900">Open Public Portfolio</button>

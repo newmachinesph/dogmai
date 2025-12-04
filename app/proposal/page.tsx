@@ -78,7 +78,7 @@ const nextSteps = [
 
 const heroHighlights = [
   { label: "Program Scope", value: "National mission-control enablement" },
-  { label: "Format", value: "12-week enterprise-grade training" },
+  { label: "Format", value: "12-20 weeks enterprise-grade training" },
   { label: "Region", value: "Philippines / Public Sector" },
 ];
 
@@ -224,7 +224,7 @@ export default function ProposalPage() {
 
             <SectionCard
               eyebrow="Program Spine"
-              title="12-Week Training Structure (Enterprise-Grade)"
+              title="12-20 Weeks Training Structure (Enterprise-Grade)"
               subtitle="Every sprint produces verifiable, deployment-ready artifacts."
             >
               <div className="grid gap-6 lg:grid-cols-3">
