@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 import { AnimatedProgress, Box, Deck, FlexBox, FullScreen, Heading, Slide } from "spectacle";
 
 const deckTheme = {
@@ -144,8 +144,36 @@ const DeckTemplate = () => (
 );
 
 export default function PitchDeckPage() {
+  const [showDesktopNotice, setShowDesktopNotice] = useState(false);
+
+  useEffect(() => {
+    const updateNoticeVisibility = () => {
+      setShowDesktopNotice(window.innerWidth < 1024);
+    };
+
+    updateNoticeVisibility();
+    window.addEventListener("resize", updateNoticeVisibility);
+
+    return () => window.removeEventListener("resize", updateNoticeVisibility);
+  }, []);
+
   return (
     <div className="min-h-screen bg-ebony text-white">
+      {showDesktopNotice && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-6">
+          <div className="w-full max-w-md rounded-2xl border border-white/10 bg-ebony px-6 py-8 text-center shadow-[0_30px_60px_rgba(0,0,0,0.65)]">
+            <p className="text-lg font-semibold text-white">These slides are best viewed on desktop.</p>
+            <button
+              type="button"
+              className="mt-6 inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+              onClick={() => setShowDesktopNotice(false)}
+            >
+              Continue anyway
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="relative min-h-screen overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -top-40 -left-32 h-80 w-80 rounded-full bg-intl-orange/10 blur-3xl" />
